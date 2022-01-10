@@ -1,0 +1,20 @@
+.form {
+    position: relative;
+
+    .required, .rule {
+        font-size: 0.875rem;
+    }
+
+    .btn {
+        @include media-breakpoint('xl') {
+            width: 100%;
+        }
+    }
+
+    &.search-in-category {
+        button[type=submit] {
+            @include center-y;
+            right: 1rem;
+        }
+    }
+}

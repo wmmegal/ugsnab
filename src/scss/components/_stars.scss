@@ -1,0 +1,31 @@
+.stars {
+    @include flex;
+
+    svg {
+        &.icon-star {
+            fill: #ebebf0;
+        }
+
+        & + svg {
+            margin-left: 0.25rem;
+        }
+    }
+
+    &.clickable {
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    @for $j from 1 through 5 {
+        &[data-rating="#{$j}"] {
+            @for $i from 1 through $j {
+                svg {
+                    &:nth-child(#{$i}) {
+                        fill: #f9a830;
+                    }
+                }
+            }
+        }
+    }
+}

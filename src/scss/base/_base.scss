@@ -1,0 +1,76 @@
+html {
+    box-sizing: border-box;
+    background: #fff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    outline: none;
+}
+
+a {
+    color: $text;
+    text-decoration: none;
+
+    @include on-event {
+        color: $text;
+        text-decoration: underline;
+    }
+}
+
+i {
+    font-style: normal;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+::-moz-placeholder {
+    opacity: 1;
+}
+
+::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: $text-font-stack;
+    padding: 0;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            grid-column: span $i;
+            min-width: 0;
+        }
+
+        .col-lg-#{$i} {
+            @include media-breakpoint('lg') {
+                grid-column: span $i;
+            }
+        }
+
+        .col-md-#{$i} {
+            @include media-breakpoint('md') {
+                grid-column: span $i;
+            }
+        }
+    }
+}
