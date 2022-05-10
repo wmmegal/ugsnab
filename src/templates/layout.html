@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body>
-<div id="page">
+<div id="page" class="container-fluid">
     {% include 'header.html' %}
     {% block page %}{% endblock %}
     {% include 'footer.html' %}
 </div>
+<script src="js/alpine.min.js" defer></script>
 <script src="js/common.js"></script>
 </body>
 </html>

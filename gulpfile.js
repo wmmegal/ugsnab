@@ -7,6 +7,7 @@ global.$ = {
     imageminJpegRecompress: require('imagemin-jpeg-recompress'),
     pngquant: require('imagemin-pngquant'),
     nunjucks: require('gulp-nunjucks-render'),
+    purgecss: require('gulp-purgecss'),
     path: {
         config: require('./src/gulp/config'),
         js: './src/js/*.js',
