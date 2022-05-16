@@ -1,0 +1,172 @@
+//font
+$font-family-base: 'Roboto';
+$line-height-base: 1.5;
+
+
+// scss-docs-start gray-color-variables
+$white: #FFF !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #f5f5f4 !default;
+$gray-400: #ced4da !default;
+$gray-500: rgba(45, 62, 80, 0.5) !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #2d3e50 !default;
+$black: #000 !default;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start color-variables
+$blue: #00afca;
+$yellow: #fec50c;
+$green: #37b757;
+$red: #ff2d55;
+$violet: #5856d6;
+$indigo: #f1f8f9;
+// scss-docs-end color-variables
+
+
+// scss-docs-start theme-color-variables
+$primary: $blue;
+$secondary: $indigo;
+$success: $green;
+$light: $gray-600;
+$dark: $gray-900;
+// scss-docs-end theme-color-variables
+
+// spacer
+$spacer: 1rem;
+$spacers: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer * 0.75,
+        4: $spacer,
+        5: $spacer * 1.25,
+        6: $spacer * 1.5,
+        7: $spacer * 1.75,
+        8: $spacer * 2,
+        9: $spacer * 2.25,
+        10: $spacer * 2.5,
+        11: $spacer * 2.75,
+        12: $spacer * 3,
+);
+
+// typography
+$font-size-base: 1rem !default;
+
+$h1-font-size: $font-size-base * 2 !default;
+$h2-font-size: $font-size-base * 1.5 !default;
+$h3-font-size: $font-size-base * 1.375 !default;
+$h4-font-size: $font-size-base * 1.25 !default;
+$h5-font-size: $font-size-base * 1.125 !default;
+$h6-font-size: $font-size-base !default;
+
+// scss-docs-start font-sizes
+$font-sizes: (
+        0: 0,
+);
+// scss-docs-end font-sizes
+
+//headings
+$headings-margin-bottom: $spacer * .5;
+$headings-font-weight: 700;
+$headings-line-height: 1.2;
+
+//shadows
+$box-shadow: 0 .5rem 1rem rgba($black, .15);
+$box-shadow-sm: 0 .125rem .25rem rgba($black, .075);
+$box-shadow-lg: 0 1rem 3rem rgba($black, .175);
+$box-shadow-inset: inset 0 1px 2px rgba($black, .075);
+
+// border-radius
+$border-radius: .5rem;
+$border-radius-sm: .25rem;
+$border-radius-lg: 1rem;
+$border-radius-pill: 50rem;
+
+// displays
+$display-font-sizes: (
+        1: 3rem,
+        2: 2.5rem,
+        3: 4rem,
+        4: 3.5rem,
+        5: 3rem,
+        6: 2.5rem
+);
+
+$display-font-weight: 700;
+
+// scss-docs-start form-label-variables
+$form-label-margin-bottom: .5rem !default;
+$form-label-font-size: 0.875rem !default;
+$form-label-font-style: null !default;
+$form-label-font-weight: null !default;
+$form-label-color: null !default;
+// scss-docs-end form-label-variables
+
+//buttons
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+$btn-font-size: 1.125rem;
+$btn-font-weight: 600;
+$btn-border-radius: $border-radius-sm;
+
+$btn-padding-y-sm: 0.75rem;
+$btn-padding-x-sm: 1.5rem;
+$btn-font-size-sm: 1rem;
+
+
+// button close
+$btn-close-color: #adb3ba;
+$btn-close-focus-shadow: none;
+
+// form-control
+$input-padding-y: 0.75rem;
+$input-padding-x: 1rem;
+$input-font-size: 1rem;
+$input-focus-box-shadow: none;
+$input-border-radius: $border-radius-sm;
+$input-border-color: #FFF;
+$input-placeholder-color: rgba(45, 62, 80, 0.3);
+$input-focus-border-color: none;
+
+//select
+$form-select-focus-box-shadow: none;
+
+//check
+$form-check-input-border: none;
+$form-check-input-border-radius: 0.188rem;
+$form-check-input-focus-box-shadow: none;
+$form-check-input-checked-bg-color: $primary;
+
+
+//links
+$link-color: $primary !default;
+$link-decoration: none !default;
+$link-shade-percentage: 20% !default;
+$link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-decoration: underline !default;
+
+// css grid
+$enable-cssgrid: false;
+
+// modal
+$modal-lg: 640px;
+
+//breadcrumb
+$breadcrumb-divider-color: rgba(#FFF, 0.8);
+$breadcrumb-active-color: rgba(#FFF, 0.8);
+
+//table
+$table-cell-padding-y: .5rem;
+$table-cell-padding-x: 0;
+$table-cell-padding-y-sm: .25rem;
+$table-cell-padding-x-sm: .25rem;
+
+//accordion
+$accordion-button-focus-box-shadow: none;
+
+//card
+$card-border-color: $gray-300;

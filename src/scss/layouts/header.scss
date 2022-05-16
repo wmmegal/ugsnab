@@ -1,0 +1,29 @@
+#header {
+    background: url("../img/bg-header.svg") no-repeat center 8px;
+    position: relative;
+
+    .container {
+        z-index: 10;
+    }
+
+    .badge {
+        font-size: 0.875rem;
+        border-radius: $border-radius-sm;
+        padding: 0;
+        width: 1.125rem;
+        line-height: 1.5rem;
+        font-weight: 600;
+
+        & + .badge {
+            margin-left: 2px;
+        }
+    }
+
+    .btn-menu {
+        padding: 0;
+
+        .icon-burger {
+            @include burger(20px, 2px, 4px, #FFF);
+        }
+    }
+}
