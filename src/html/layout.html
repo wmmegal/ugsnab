@@ -7,11 +7,9 @@
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body class="d-flex flex-column vh-100">
-{% include 'header.html' %}
+{% include 'src/html/header.html' %}
 {% block page %}{% endblock %}
-{% include 'footer.html' %}
-<script src="js/bootstrap.min.js"></script>
-<script src="js/alpine.min.js" defer></script>
-<script src="js/common.js"></script>
+{% include 'src/html/footer.html' %}
+<script type="module" src="./js/common.js"></script>
 </body>
 </html>
