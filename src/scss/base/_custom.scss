@@ -1,5 +1,16 @@
-@include media-breakpoint-up(xxl) {
+@include media-breakpoint-up(xl) {
     .container {
-        max-width: 1190px;
+        max-width: 996px;
     }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }

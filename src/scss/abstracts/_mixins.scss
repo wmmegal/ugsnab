@@ -129,7 +129,6 @@ $sass-burger-add-vendor-prefixes: true !default;
             -o-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
         }
         transform: translateY($burger-gutter + $burger-height) rotate(45deg);
-        width: 24px;
     }
     &:after {
         @if $sass-burger-add-vendor-prefixes {
@@ -139,6 +138,5 @@ $sass-burger-add-vendor-prefixes: true !default;
             -o-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
         }
         transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
-        width: 24px;
     }
 }
