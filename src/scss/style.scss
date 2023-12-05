@@ -1,26 +1,7 @@
-// custom variables
-@import "abstracts/variables";
-@import "abstracts/mixins";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-//bootstrap
-@import "~bootstrap/scss/bootstrap-reboot";
-// Bootstrap Reboot collection
-@import "~bootstrap/scss/mixins/breakpoints.scss";
-// Bootstrap Breakpoints mixin
-@import "~bootstrap/scss/bootstrap-grid.scss";
-// Optional Bootstrap Grid
-
-//base
-@import "base/fonts";
-@import "base/custom";
-@import "base/icons";
-@import "base/typography";
-
-//vendors
-
-//components
-@import "components/button";
-
-//layouts
-@import "layouts/header";
-@import "layouts/footer";
+.btn {
+    @apply p-40;
+}
