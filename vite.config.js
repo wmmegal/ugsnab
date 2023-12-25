@@ -1,11 +1,10 @@
-import nunjucks from 'vite-plugin-nunjucks'
 import {createSvgIconsPlugin} from 'vite-plugin-svg-icons'
 import {defineConfig} from 'vite'
 import {resolve} from 'path';
 import glob from 'glob';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import htmlPurge from 'vite-plugin-html-purgecss'
+import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig({
     root: resolve(__dirname, 'src'),
@@ -49,8 +48,9 @@ export default defineConfig({
         }
     },
     plugins: [
-        nunjucks(),
-        htmlPurge(),
+        handlebars({
+            partialDirectory: resolve(__dirname, 'src/partials'),
+        }),
         createSvgIconsPlugin({
             // Specify the icon folder to be cached
             iconDirs: [resolve(__dirname, 'src/img/icons')],
