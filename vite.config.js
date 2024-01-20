@@ -4,7 +4,8 @@ import {resolve} from 'path';
 import glob from 'glob';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import handlebars from 'vite-plugin-handlebars';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+import injectHTML from 'vite-plugin-html-inject'
 
 export default defineConfig({
     root: resolve(__dirname, 'src'),
@@ -41,22 +42,15 @@ export default defineConfig({
             },
         },
     },
-    resolve: {
-        alias: {
-            '~bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
-            '@': resolve(__dirname, 'src'),
-        }
-    },
     plugins: [
-        handlebars({
-            partialDirectory: resolve(__dirname, 'src/partials'),
-        }),
+        injectHTML(),
         createSvgIconsPlugin({
             // Specify the icon folder to be cached
             iconDirs: [resolve(__dirname, 'src/img/icons')],
             // Specify symbolId format
             symbolId: 'icon-[name]',
         }),
+        ViteImageOptimizer()
     ],
     server: {
         port: 8080,
