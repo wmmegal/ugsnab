@@ -1,37 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{html,js}"
-  ],
-  theme: {
-    fontFamily: {
-      'sans': 'Segoe UI'
+    content: ['./src/**/*.{html,js}'],
+    theme: {
+        container: {
+            center: true,
+            padding: '15px',
+            screens: {
+                sm: '375px',
+                md: '575px',
+                lg: '767px',
+                xl: '1200px',
+            },
+        },
+        colors: {
+            primary: '#481f53',
+            secondary: '#696969',
+            white: '#FFFFFF',
+            black: '#1c1c1c',
+            dark: '#27173b',
+        },
+        extend: {
+            fontSize: {
+                '4xl': ['45px', '1.2'],
+                '3xl': ['35px', '1.2'],
+            },
+        },
     },
-    container: {
-      center: true,
-      padding: '20px',
-      screens: {
-        sm: '375px',
-        md: '575px',
-        lg: '767px',
-        xl: '1036px',
-      },
-    },
-    colors: {
-      'blue': '#00b6ba',
-      'black': '#16140f',
-      'white': '#FFFFFF',
-      'gray': '#a3a3a3',
-      'gray-2': '#f9f9f9',
-      'red': '#ff506e',
-      'yellow': '#FFC554'
-    },
-    extend: {
-      fontSize: {
-        '4xl': ['40px', '1']
-      },
-    },
-  },
-  plugins: [],
-}
-
+    plugins: [],
+};

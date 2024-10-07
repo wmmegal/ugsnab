@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Roboto', system-ui;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply inline-flex justify-center rounded-[18px] px-20 py-8 text-lg font-bold uppercase leading-none;
+
+        &.btn-empty-white {
+            @apply text-white;
+            box-shadow: 0 0 0 3px inset;
+
+            &:hover {
+                @apply text-dark bg-white;
+            }
+        }
+
+        &.btn-primary {
+            @apply text-white;
+            background-image: linear-gradient(-29deg, #471f53 0%, #3f215b 100%);
+
+            &:hover {
+                background-image: linear-gradient(-29deg, #6d537b 0%, #4f2778 100%);
+            }
+        }
+    }
+}
+
+.splide__pagination {
+    @apply absolute bottom-9 left-1/2 flex -translate-x-1/2 transform gap-3;
+
+    li {
+        button {
+            @apply h-2.5 w-12 rounded-[5px] bg-white bg-opacity-50;
+
+            &.is-active {
+                @apply bg-opacity-100;
+            }
+        }
+    }
+}
+
+.splide-partners {
+    .splide__slide {
+        @apply flex items-center;
+
+        img {
+            @apply max-w-[300px];
+        }
+    }
+}
+
+@layer utilities {
+    .inset-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

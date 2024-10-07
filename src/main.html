@@ -1,16 +1,518 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Index</title>
-</head>
-<body class="flex flex-col min-h-screen">
-<load ="partials/header.html" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>Index</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    </head>
+    <body class="flex min-h-screen flex-col">
+        <load ="partials/header.html" />
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <load ="partials/slide.html" />
+                    </li>
+                    <li class="splide__slide">
+                        <load ="partials/slide.html" />
+                    </li>
+                    <li class="splide__slide">
+                        <load ="partials/slide.html" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container py-10 xl:py-20">
+            <div class="text-dark mb-8 text-center text-3xl font-bold uppercase">О компании</div>
+            <div class="mb-10 flex justify-center text-white">
+                <div class="rounded-[30px] bg-gradient-to-r from-[#a08aae] to-[#785d92] px-12 py-5 text-xl font-bold">
+                    КОМПАНИЯ ООО «ЮГСНАБ» БЕРЕТ СВОЕ НАЧАЛО В 1993 ГОДУ
+                </div>
+            </div>
+            <div class="mb-10 grid grid-cols-2 gap-y-8">
+                <div class="relative pl-20 text-xl font-bold leading-[31px]">
+                    <img
+                        src="img/hexagon-li.png"
+                        alt=""
+                        width="21"
+                        height="21"
+                        class="absolute left-[45px] top-1"
+                        loading="lazy"
+                    />
+                    Четверть века успешно работаем <br />На рынке юга России.
+                </div>
+                <div class="relative pl-20 text-xl font-bold leading-[31px]">
+                    <img
+                        src="img/hexagon-li.png"
+                        alt=""
+                        width="21"
+                        height="21"
+                        class="absolute left-[45px] top-1"
+                        loading="lazy"
+                    />
+                    Собственные склады более 6000 кв. М
+                </div>
+                <div class="relative pl-20 text-xl font-bold leading-[31px]">
+                    <img
+                        src="img/hexagon-li.png"
+                        alt=""
+                        width="21"
+                        height="21"
+                        class="absolute left-[45px] top-1"
+                        loading="lazy"
+                    />
+                    Акб — 6107 ежемесячных партнёров <br />(все каналы продаж)
+                </div>
+                <div class="relative pl-20 text-xl font-bold leading-[31px]">
+                    <img
+                        src="img/hexagon-li.png"
+                        alt=""
+                        width="21"
+                        height="21"
+                        class="absolute left-[45px] top-1"
+                        loading="lazy"
+                    />
+                    Офисы и команды в городах армавир, Краснодар, <br />
+                    белореченск, кропоткин, Станицы ленинградская и павловская.
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="img/hexagon-small.png" alt="" width="46" height="50" loading="lazy" />
+                </div>
 
-<div class="container">
-    content
-</div>
-<load ="partials/footer.html" />
-</body>
+                <p class="p-6 text-justify uppercase">
+                    <b>Объёмообразующие контракты: «ТРЕЙД СЕРВИС» </b>( ТМ «ВЯЗАНКА», «СТАРОДВОРСКИЕ КОЛБАСЫ»,
+                    «БУЛЬМЕНИ», «БАВАРУШКА»), ТК «РЕСУРС-ВОЛГА» ( ТМ «ДЫМ-ДЫМЫЧ», «РОССИЯНКА», «БЛАГОЯР» и др.), ТД
+                    «ЧЕРКИЗОВО» (ТМ «ЧЕРКИЗОВО», «МЯСНАЯ ГУБЕРНИЯ»), «МИЛК-МАРКЕТ» ( «СОЛНЫШКО КУБАНИ», «PROLATE» и
+                    др.), «МАЙ-БРЕНДС» («МАЙСКИЙ ЧАЙ», «KOFFESSO», «СURTIS», «РИЧАРД» и др.), «ЗНАТОК» (ТМ «ЗНАТОК»), ТД
+                    «НМЖК» (ТМ «АСТОРИЯ», «РЯБА», «ХОЗЯЮШКА»), «ГАРАНТ» (ТМ «ГЛАВПРОДУКТ» ), МЭЗ «ЮГ РУСИ» (ТМ
+                    «КРАСНОДАРСКИЙ МАЙОНЕЗ», «АВЕДОВ») ТД «КИПРИНО» (ТМ «КИПРИНО», «РОМАНОВСКИЙ СЫРОДЕЛ»), «ЭЙЧ ЭНД ЭН
+                    ТРЕЙД» (ТМ «РАСТИШКА», «ПРОСТОКВАШИНО», «АКТИБИО», «ДАНИССИМО», «КИНДЕР», «ПЕТМОЛ»), «АРМХЛЕБ» ( ТМ
+                    «АРМХЛЕБ», «ДОН ДЕСЕРТ»), «МАРТИН» (ТМ «МАРТИН», «ГРАНД СЕМАЧОС», «МОЛОДЕЖНЫЕ», «СУПЕР СЕМЕЧКА»,
+                    «ARGIL», «ANTARI», «ЖЕЛАЕВ» ), «ДА» (ТМ «ДЮБУА»), «ГРАНД-СТАР» (ТМ КУБАНОЧКА), «КОНТИ-РУС» (ТМ
+                    «ШОКОЛАДНЫЕ ИСТОРИИ ДЖЕК» , «bongour», «AMOUR», «СУПЕР-КОНТИК», «ЗОЛОТАЯ ЛИЛИЯ», «ESFERO», «TIMI» и
+                    др. ).
+                </p>
+                <div class="mt-4 text-right">
+                    <img src="img/hexagons.png" loading="lazy" class="inline-block" alt="" width="97" height="76" />
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#efeef3] py-10 xl:py-20">
+            <div class="container">
+                <div class="grid grid-cols-12 items-center gap-8">
+                    <figure class="col-span-5">
+                        <img src="img/hexagon-map.png" alt="" width="500" height="549" loading="lazy" />
+                    </figure>
+                    <div class="col-span-7">
+                        <div class="text-dark mb-8 text-3xl font-bold uppercase">ГЕОГРАФИЯ ДИСТРИБЬЮЦИИ</div>
+                        <div class="grid grid-cols-3 font-bold">
+                            <div class="leading-8">
+                                АРМАВИР, <br />
+                                НОВОАЛЕКСАНДРОВСК, <br />
+                                НОВОКУБАНСКИЙ, <br />
+                                УСПЕНСКИЙ, <br />
+                                ОТРАДНЕНСКИЙ, <br />
+                                ЛАБИНСКИЙ, <br />
+                                МОСТОВСКОЙ, <br />
+                                КУРГАНИНСКИЙ, <br />
+                                ГУЛЬКЕВИЧСКИЙ,
+                            </div>
+                            <div class="leading-8">
+                                ТБИЛИССКИЙ, <br />
+                                КАВКАЗСКИЙ, <br />
+                                НОВОПОКРОВСКИЙ, <br />
+                                БЕЛОГЛИНСКИЙ, <br />
+                                ТИХОРЕЦКИЙ, <br />
+                                ВЫСЕЛКОВСКИЙ, <br />
+                                ПАВЛОВСКИЙ, <br />
+                                КРЫЛОВСКОЙ, <br />
+                                КУЩЕВСКИЙ,
+                            </div>
+                            <div class="leading-8">
+                                ЛЕНИНГРАДСКИЙ, <br />
+                                СТАРОМИНСКИЙ, <br />
+                                ПРИМОРСКО-АХТАРСКИЙ, <br />
+                                ЕЙСКИЙ,<br />
+                                КАНЕВСКОЙ, <br />
+                                БЕЛОРЕЧЕНСКИЙ, <br />
+                                АПШЕРОНСКИЙ РАЙОНЫ, <br />
+                                МАЙКОП И РЕСПУБЛИКА АДЫГЕЯ.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative">
+            <img
+                src="img/bg-cabinet.jpg"
+                alt=""
+                class="absolute h-full w-full object-fill"
+                width="2000"
+                height="395"
+                loading="lazy"
+            />
+            <div class="container relative py-10 text-center text-white xl:py-20">
+                <div class="tmb-8 mb-10 text-3xl font-bold uppercase">О компании</div>
+                <a href="#" class="btn btn-empty-white">Войти</a>
+            </div>
+        </div>
+        <div class="container relative py-10 xl:py-20">
+            <div class="text-dark mb-10 text-center text-3xl font-bold uppercase">Акции</div>
+            <div class="grid grid-cols-3 gap-10">
+                <div class="overflow-hidden rounded-[20px] bg-[#f6f6f8]">
+                    <figure>
+                        <img
+                            src="img/product.jpg"
+                            alt=""
+                            width="364"
+                            height="238"
+                            class="h-auto w-full"
+                            loading="lazy"
+                        />
+                    </figure>
+                    <div class="px-8 py-6 text-lg">
+                        <time datetime="05.06.2024" class="text-[#696969]">05.06.2024</time>
+                        <div class="mb-4">
+                            <a href="#" class="text-primary">Представили компанию "БЕТА"</a>
+                        </div>
+                        <p>
+                            Производителя из г.Железноводска знаменитых тм "Славяновская", "Ясногорская", "Консульская".
+                        </p>
+                        <div class="mt-4 text-right">
+                            <a href="#" class="inline-flex items-center gap-2.5 font-bold text-primary">
+                                Подробнее
+                                <svg class="icon-arrow h-3.5 w-[10px]">
+                                    <use href="#icon-arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-[20px] bg-[#f6f6f8]">
+                    <figure>
+                        <img
+                            src="img/product.jpg"
+                            alt=""
+                            width="364"
+                            height="238"
+                            class="h-auto w-full"
+                            loading="lazy"
+                        />
+                    </figure>
+                    <div class="px-8 py-6 text-lg">
+                        <time datetime="05.06.2024" class="text-[#696969]">05.06.2024</time>
+                        <div class="mb-4">
+                            <a href="#" class="text-primary">Представили компанию "БЕТА"</a>
+                        </div>
+                        <p>
+                            Производителя из г.Железноводска знаменитых тм "Славяновская", "Ясногорская", "Консульская".
+                        </p>
+                        <div class="mt-4 text-right">
+                            <a href="#" class="inline-flex items-center gap-2.5 font-bold text-primary">
+                                Подробнее
+                                <svg class="icon-arrow h-3.5 w-[10px]">
+                                    <use href="#icon-arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-[20px] bg-[#f6f6f8]">
+                    <figure>
+                        <img
+                            src="img/product.jpg"
+                            alt=""
+                            width="364"
+                            height="238"
+                            class="h-auto w-full"
+                            loading="lazy"
+                        />
+                    </figure>
+                    <div class="px-8 py-6 text-lg">
+                        <time datetime="05.06.2024" class="text-[#696969]">05.06.2024</time>
+                        <div class="mb-4">
+                            <a href="#" class="text-primary">Представили компанию "БЕТА"</a>
+                        </div>
+                        <p>
+                            Производителя из г.Железноводска знаменитых тм "Славяновская", "Ясногорская", "Консульская".
+                        </p>
+                        <div class="mt-4 text-right">
+                            <a href="#" class="inline-flex items-center gap-2.5 font-bold text-primary">
+                                Подробнее
+                                <svg class="icon-arrow h-3.5 w-[10px]">
+                                    <use href="#icon-arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary col-start-2 col-end-3">Смотреть все акции</a>
+            </div>
+        </div>
+        <div class="bg-[#efeef3] py-10 xl:py-20">
+            <div class="container">
+                <div class="text-dark mb-10 text-center text-3xl font-bold uppercase">Преимущества</div>
+                <div class="grid grid-cols-3 gap-7">
+                    <div class="flex items-center gap-7">
+                        <svg class="icon-trophy h-20 w-[86px] shrink-0 text-[#502878]">
+                            <use href="#icon-trophy"></use>
+                        </svg>
+                        <p class="text-lg">Компания «ЮгСнаб» является одним из лидеров среди компаний</p>
+                    </div>
+                    <div class="flex items-center gap-7">
+                        <svg class="icon-cubes h-20 w-[86px] shrink-0 text-[#502878]">
+                            <use href="#icon-cubes"></use>
+                        </svg>
+
+                        <p class="text-lg">Реализуем всю линейку продуктов питания</p>
+                    </div>
+                    <div class="flex items-center gap-7">
+                        <svg class="icon-truck h-20 w-[86px] shrink-0 text-[#502878]">
+                            <use href="#icon-truck"></use>
+                        </svg>
+                        <p class="text-lg">С особым вниманием относимся к логистике товаров</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative bg-[#352666] py-10 xl:py-20">
+            <img
+                src="img/bg-bottom-left.jpg"
+                alt=""
+                width="361"
+                height="229"
+                loading="lazy"
+                class="absolute bottom-0 left-0"
+            />
+            <img
+                src="img/bg-top-right.jpg"
+                alt=""
+                width="601"
+                height="691"
+                loading="lazy"
+                class="absolute right-0 top-0"
+            />
+            <div class="container relative text-white">
+                <div class="mb-10 text-center text-3xl font-bold uppercase">Проверено временем</div>
+                <p class="mb-10 text-center text-[26px]">
+                    Компания осуществляет прямые поставки продукции по Армавиру, поставки по России осуществляются через
+                    региональных дистрибьюторов
+                </p>
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <img src="img/arrows.png" alt="" width="748" height="747" loading="lazy" />
+                        <div class="group absolute left-[182px] top-0 text-center hover:z-10">
+                            <img src="img/hexagon-icon.png" alt="" width="199" height="221" />
+                            <div class="inset-center w-[200px] px-4">
+                                <div class="mb-4 text-[30px]">с 1996г.</div>
+                                <p>Дистрибьюция пива, напитков, продуктов питания, non-food</p>
+                            </div>
+                            <div
+                                class="absolute left-[134px] top-[202px] w-[104px] transition duration-500 group-hover:scale-125"
+                            >
+                                <img src="img/hexagon-icon-small.png" alt="" width="104" height="115" loading="lazy" />
+                                <div class="inset-center"></div>
+                            </div>
+                        </div>
+                        <div class="group absolute right-[92px] top-[58px] text-center hover:z-10">
+                            <img src="img/hexagon-icon.png" alt="" width="199" height="221" />
+                            <div class="inset-center w-[200px] px-4">
+                                <div class="mb-4 text-[30px]">50 чел..</div>
+                                <p>Количество торговых представителей</p>
+                            </div>
+                            <div
+                                class="absolute -left-[31px] top-[202px] w-[104px] transition duration-500 group-hover:scale-125"
+                            >
+                                <img src="img/hexagon-icon-small.png" alt="" width="104" height="115" loading="lazy" />
+                                <div class="inset-center"></div>
+                            </div>
+                        </div>
+                        <div class="group absolute right-0 top-[320px] text-center hover:z-10">
+                            <img src="img/hexagon-icon.png" alt="" width="199" height="221" />
+                            <div class="inset-center w-[200px] px-4">
+                                <p>АКБ</p>
+                                <div class="text-[30px]">6 000 РТТ</div>
+                                <p class="text-sm">
+                                    График посещений торговыми представителями: <br />
+                                    вся АКБ 2 раза <br />
+                                    в неделю
+                                </p>
+                            </div>
+                            <div
+                                class="absolute -left-[126px] top-[60px] w-[104px] transition duration-500 group-hover:scale-125"
+                            >
+                                <img src="img/hexagon-icon-small.png" alt="" width="104" height="115" loading="lazy" />
+                                <div class="inset-center"></div>
+                            </div>
+                        </div>
+                        <div class="group absolute bottom-0 right-[185px] text-center hover:z-10">
+                            <img src="img/hexagon-icon.png" alt="" width="199" height="221" />
+                            <div class="inset-center w-[200px] px-4">
+                                <div class="text-[30px]">30 ед.</div>
+                                <p class="text-sm">
+                                    Собственные <br />
+                                    автомобили <br />
+                                    для доставки
+                                </p>
+                            </div>
+                            <div
+                                class="absolute -left-[50px] -top-[90px] w-[104px] transition duration-500 group-hover:scale-125"
+                            >
+                                <img src="img/hexagon-icon-small.png" alt="" width="104" height="115" loading="lazy" />
+                                <div class="inset-center"></div>
+                            </div>
+                        </div>
+                        <div class="group absolute bottom-[50px] left-[84px] text-center hover:z-10">
+                            <img src="img/hexagon-icon.png" alt="" width="199" height="221" />
+                            <div class="inset-center w-[200px] px-4">
+                                <div class="text-[30px]">6 000 кв.м.</div>
+                                <p class="text-sm">
+                                    Собственные <br />
+                                    склады
+                                </p>
+                            </div>
+                            <div
+                                class="absolute -right-[25px] -top-[100px] w-[104px] transition duration-500 group-hover:scale-125"
+                            >
+                                <img src="img/hexagon-icon-small.png" alt="" width="104" height="115" loading="lazy" />
+                                <div class="inset-center"></div>
+                            </div>
+                        </div>
+                        <div class="group absolute bottom-[320px] left-[-10px] text-center hover:z-10">
+                            <img src="img/hexagon-icon.png" alt="" width="199" height="221" />
+                            <div class="inset-center w-[200px] px-4">
+                                <p class="text-sm">
+                                    Офисы: <br />
+                                    Краснодар, Армавир, <br />
+                                    Белореченск, <br />
+                                    Кропоткин, <br />
+                                    ст.Ленинградская, <br />
+                                    ст. Павловская
+                                </p>
+                            </div>
+                            <div
+                                class="absolute -right-[120px] top-[50px] w-[104px] transition duration-500 group-hover:scale-125"
+                            >
+                                <img src="img/hexagon-icon-small.png" alt="" width="104" height="115" loading="lazy" />
+                                <div class="inset-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-10 xl:py-20">
+            <div class="splide splide-partners mb-10">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-1.png" alt="" width="177" height="65" loading="lazy" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-2.png" alt="" width="359" loading="lazy" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-3.png" alt="" width="690" loading="lazy" height="200" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-1.png" alt="" width="177" height="65" loading="lazy" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-2.png" alt="" width="359" loading="lazy" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-3.png" alt="" width="690" loading="lazy" height="200" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-1.png" alt="" width="177" height="65" loading="lazy" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-2.png" alt="" width="359" loading="lazy" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-3.png" alt="" width="690" loading="lazy" height="200" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-dark container mb-10">
+            <div class="text-dark mb-7 text-center text-3xl font-bold uppercase">КОНТАКТЫ</div>
+            <p class="text-dark mb-6 text-center text-2xl">Центральный офис: г. Армавир, ул. Мичурина 2</p>
+            <div class="mb-6 grid grid-cols-3 text-xl font-bold">
+                <div>
+                    <dl>
+                        <dt>ОСП г. Краснодар:</dt>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 320-15-18</a>
+                            <a href="#" class="text-primary">Отдел выписки</a>
+                        </dd>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 161-79-93</a>
+                            <a href="#" class="text-primary">Отдел закупок</a>
+                        </dd>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 433-81-40</a>
+                            <a href="#" class="text-primary">Отдел продаж</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div>
+                    <dl>
+                        <dt>ОСП г. Армавир:</dt>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 320-15-18</a>
+                            <a href="#" class="text-primary">Отдел выписки</a>
+                        </dd>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 161-79-93</a>
+                            <a href="#" class="text-primary">Отдел закупок</a>
+                        </dd>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 433-81-40</a>
+                            <a href="#" class="text-primary">Отдел продаж</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div>
+                    <dl>
+                        <dt>ОСП ст.Павловская</dt>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 630-57-77</a>
+                            <a href="#" class="text-primary">Отделы выписки, закупок, продаж</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary">Есть вопросы? напишите нам!</button>
+            </div>
+        </div>
+        <img src="img/map.jpg" alt="" width="2000" height="509" loading="lazy" />
+        <load ="partials/footer.html" />
+    </body>
 </html>
