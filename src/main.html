@@ -8,9 +8,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     </head>
-    <body class="flex min-h-screen flex-col">
+    <body
+        class="flex min-h-screen flex-col"
+        x-data="app"
+        @resize.window="showMenu = window.matchMedia('(min-width: 1200px)').matches"
+    >
         <load ="partials/header.html" />
-        <div class="splide">
+        <load ="partials/header-fixed.html" />
+        <div class="splide splide-cta">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
@@ -26,13 +31,15 @@
             </div>
         </div>
         <div class="container py-10 xl:py-20">
-            <div class="text-dark mb-8 text-center text-3xl font-bold uppercase">О компании</div>
+            <div class="mb-8 text-center text-3xl font-bold uppercase text-dark">О компании</div>
             <div class="mb-10 flex justify-center text-white">
-                <div class="rounded-[30px] bg-gradient-to-r from-[#a08aae] to-[#785d92] px-12 py-5 text-xl font-bold">
+                <div
+                    class="rounded-[30px] bg-gradient-to-r from-[#a08aae] to-[#785d92] px-6 py-2 font-bold xl:px-12 xl:py-5 xl:text-xl"
+                >
                     КОМПАНИЯ ООО «ЮГСНАБ» БЕРЕТ СВОЕ НАЧАЛО В 1993 ГОДУ
                 </div>
             </div>
-            <div class="mb-10 grid grid-cols-2 gap-y-8">
+            <div class="mb-10 grid grid-cols-1 gap-y-8 xl:grid-cols-2">
                 <div class="relative pl-20 text-xl font-bold leading-[31px]">
                     <img
                         src="img/hexagon-li.png"
@@ -105,12 +112,12 @@
         <div class="bg-[#efeef3] py-10 xl:py-20">
             <div class="container">
                 <div class="grid grid-cols-12 items-center gap-8">
-                    <figure class="col-span-5">
+                    <figure class="col-span-12 xl:col-span-5">
                         <img src="img/hexagon-map.png" alt="" width="500" height="549" loading="lazy" />
                     </figure>
-                    <div class="col-span-7">
-                        <div class="text-dark mb-8 text-3xl font-bold uppercase">ГЕОГРАФИЯ ДИСТРИБЬЮЦИИ</div>
-                        <div class="grid grid-cols-3 font-bold">
+                    <div class="col-span-12 xl:col-span-7">
+                        <div class="mb-8 text-3xl font-bold uppercase text-dark">ГЕОГРАФИЯ ДИСТРИБЬЮЦИИ</div>
+                        <div class="grid grid-cols-1 font-bold xl:grid-cols-3">
                             <div class="leading-8">
                                 АРМАВИР, <br />
                                 НОВОАЛЕКСАНДРОВСК, <br />
@@ -152,19 +159,19 @@
             <img
                 src="img/bg-cabinet.jpg"
                 alt=""
-                class="absolute h-full w-full object-fill"
+                class="absolute h-full w-full object-cover"
                 width="2000"
                 height="395"
                 loading="lazy"
             />
             <div class="container relative py-10 text-center text-white xl:py-20">
-                <div class="tmb-8 mb-10 text-3xl font-bold uppercase">О компании</div>
+                <div class="mb-10 text-3xl font-bold uppercase">О компании</div>
                 <a href="#" class="btn btn-empty-white">Войти</a>
             </div>
         </div>
         <div class="container relative py-10 xl:py-20">
-            <div class="text-dark mb-10 text-center text-3xl font-bold uppercase">Акции</div>
-            <div class="grid grid-cols-3 gap-10">
+            <div class="mb-10 text-center text-3xl font-bold uppercase text-dark">Акции</div>
+            <div class="grid grid-cols-1 gap-6 xl:grid-cols-3 xl:gap-10">
                 <div class="overflow-hidden rounded-[20px] bg-[#f6f6f8]">
                     <figure>
                         <img
@@ -252,13 +259,13 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn btn-primary col-start-2 col-end-3">Смотреть все акции</a>
+                <a href="#" class="btn btn-primary xl:col-start-2 xl:col-end-3">Смотреть все акции</a>
             </div>
         </div>
         <div class="bg-[#efeef3] py-10 xl:py-20">
             <div class="container">
-                <div class="text-dark mb-10 text-center text-3xl font-bold uppercase">Преимущества</div>
-                <div class="grid grid-cols-3 gap-7">
+                <div class="mb-10 text-center text-3xl font-bold uppercase text-dark">Преимущества</div>
+                <div class="grid grid-cols-1 gap-6 xl:grid-cols-3 xl:gap-7">
                     <div class="flex items-center gap-7">
                         <svg class="icon-trophy h-20 w-[86px] shrink-0 text-[#502878]">
                             <use href="#icon-trophy"></use>
@@ -288,7 +295,7 @@
                 width="361"
                 height="229"
                 loading="lazy"
-                class="absolute bottom-0 left-0"
+                class="absolute bottom-0 left-0 hidden xl:block"
             />
             <img
                 src="img/bg-top-right.jpg"
@@ -296,44 +303,59 @@
                 width="601"
                 height="691"
                 loading="lazy"
-                class="absolute right-0 top-0"
+                class="absolute right-0 top-0 hidden xl:block"
             />
             <div class="container relative text-white">
                 <div class="mb-10 text-center text-3xl font-bold uppercase">Проверено временем</div>
-                <p class="mb-10 text-center text-[26px]">
+                <p class="mb-10 text-center xl:text-[26px]">
                     Компания осуществляет прямые поставки продукции по Армавиру, поставки по России осуществляются через
                     региональных дистрибьюторов
                 </p>
                 <div class="flex justify-center">
-                    <div class="relative">
-                        <img src="img/arrows.png" alt="" width="748" height="747" loading="lazy" />
-                        <div class="group absolute left-[182px] top-0 text-center hover:z-10">
+                    <div class="relative flex flex-col gap-6">
+                        <img
+                            src="img/arrows.png"
+                            class="hidden xl:block"
+                            alt=""
+                            width="748"
+                            height="747"
+                            loading="lazy"
+                        />
+                        <div class="group relative text-center hover:z-10 xl:absolute xl:left-[182px] xl:top-0">
                             <img src="img/hexagon-icon.png" alt="" width="199" height="221" />
                             <div class="inset-center w-[200px] px-4">
                                 <div class="mb-4 text-[30px]">с 1996г.</div>
                                 <p>Дистрибьюция пива, напитков, продуктов питания, non-food</p>
                             </div>
                             <div
-                                class="absolute left-[134px] top-[202px] w-[104px] transition duration-500 group-hover:scale-125"
+                                class="absolute left-[134px] top-[202px] hidden w-[104px] transition duration-500 group-hover:scale-125 xl:block"
                             >
                                 <img src="img/hexagon-icon-small.png" alt="" width="104" height="115" loading="lazy" />
-                                <div class="inset-center"></div>
+                                <div class="inset-center">
+                                    <svg class="icon-beer h-12 w-5">
+                                        <use href="#icon-beer"></use>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
-                        <div class="group absolute right-[92px] top-[58px] text-center hover:z-10">
+                        <div class="group relative text-center hover:z-10 xl:absolute xl:right-[92px] xl:top-[58px]">
                             <img src="img/hexagon-icon.png" alt="" width="199" height="221" />
                             <div class="inset-center w-[200px] px-4">
                                 <div class="mb-4 text-[30px]">50 чел..</div>
                                 <p>Количество торговых представителей</p>
                             </div>
                             <div
-                                class="absolute -left-[31px] top-[202px] w-[104px] transition duration-500 group-hover:scale-125"
+                                class="absolute -left-[31px] top-[202px] hidden w-[104px] transition duration-500 group-hover:scale-125 xl:block"
                             >
                                 <img src="img/hexagon-icon-small.png" alt="" width="104" height="115" loading="lazy" />
-                                <div class="inset-center"></div>
+                                <div class="inset-center">
+                                    <svg class="icon-group h-8 w-10">
+                                        <use href="#icon-group"></use>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
-                        <div class="group absolute right-0 top-[320px] text-center hover:z-10">
+                        <div class="group relative text-center hover:z-10 xl:absolute xl:right-0 xl:top-[320px]">
                             <img src="img/hexagon-icon.png" alt="" width="199" height="221" />
                             <div class="inset-center w-[200px] px-4">
                                 <p>АКБ</p>
@@ -345,13 +367,17 @@
                                 </p>
                             </div>
                             <div
-                                class="absolute -left-[126px] top-[60px] w-[104px] transition duration-500 group-hover:scale-125"
+                                class="absolute -left-[126px] top-[60px] hidden w-[104px] transition duration-500 group-hover:scale-125 xl:block"
                             >
                                 <img src="img/hexagon-icon-small.png" alt="" width="104" height="115" loading="lazy" />
-                                <div class="inset-center"></div>
+                                <div class="inset-center">
+                                    <svg class="icon-group size-8">
+                                        <use href="#icon-group"></use>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
-                        <div class="group absolute bottom-0 right-[185px] text-center hover:z-10">
+                        <div class="group relative text-center hover:z-10 xl:absolute xl:bottom-0 xl:right-[185px]">
                             <img src="img/hexagon-icon.png" alt="" width="199" height="221" />
                             <div class="inset-center w-[200px] px-4">
                                 <div class="text-[30px]">30 ед.</div>
@@ -362,13 +388,17 @@
                                 </p>
                             </div>
                             <div
-                                class="absolute -left-[50px] -top-[90px] w-[104px] transition duration-500 group-hover:scale-125"
+                                class="absolute -left-[50px] -top-[90px] hidden w-[104px] transition duration-500 group-hover:scale-125 xl:block"
                             >
                                 <img src="img/hexagon-icon-small.png" alt="" width="104" height="115" loading="lazy" />
-                                <div class="inset-center"></div>
+                                <div class="inset-center">
+                                    <svg class="icon-express-delivery h-8 w-10">
+                                        <use href="#icon-express-delivery"></use>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
-                        <div class="group absolute bottom-[50px] left-[84px] text-center hover:z-10">
+                        <div class="group relative text-center hover:z-10 xl:absolute xl:bottom-[50px] xl:left-[84px]">
                             <img src="img/hexagon-icon.png" alt="" width="199" height="221" />
                             <div class="inset-center w-[200px] px-4">
                                 <div class="text-[30px]">6 000 кв.м.</div>
@@ -378,13 +408,19 @@
                                 </p>
                             </div>
                             <div
-                                class="absolute -right-[25px] -top-[100px] w-[104px] transition duration-500 group-hover:scale-125"
+                                class="absolute -right-[25px] -top-[100px] hidden w-[104px] transition duration-500 group-hover:scale-125 xl:block"
                             >
                                 <img src="img/hexagon-icon-small.png" alt="" width="104" height="115" loading="lazy" />
-                                <div class="inset-center"></div>
+                                <div class="inset-center">
+                                    <svg class="icon-warehouse size-10">
+                                        <use href="#icon-warehouse"></use>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
-                        <div class="group absolute bottom-[320px] left-[-10px] text-center hover:z-10">
+                        <div
+                            class="group relative text-center hover:z-10 xl:absolute xl:bottom-[320px] xl:left-[-10px]"
+                        >
                             <img src="img/hexagon-icon.png" alt="" width="199" height="221" />
                             <div class="inset-center w-[200px] px-4">
                                 <p class="text-sm">
@@ -397,10 +433,14 @@
                                 </p>
                             </div>
                             <div
-                                class="absolute -right-[120px] top-[50px] w-[104px] transition duration-500 group-hover:scale-125"
+                                class="absolute -right-[120px] top-[50px] hidden w-[104px] transition duration-500 group-hover:scale-125 xl:block"
                             >
                                 <img src="img/hexagon-icon-small.png" alt="" width="104" height="115" loading="lazy" />
-                                <div class="inset-center"></div>
+                                <div class="inset-center">
+                                    <svg class="icon-office size-9">
+                                        <use href="#icon-office"></use>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -460,10 +500,10 @@
                 </div>
             </div>
         </div>
-        <div class="text-dark container mb-10">
-            <div class="text-dark mb-7 text-center text-3xl font-bold uppercase">КОНТАКТЫ</div>
-            <p class="text-dark mb-6 text-center text-2xl">Центральный офис: г. Армавир, ул. Мичурина 2</p>
-            <div class="mb-6 grid grid-cols-3 text-xl font-bold">
+        <div class="container mb-10 text-dark">
+            <div class="mb-7 text-center text-3xl font-bold uppercase text-dark">КОНТАКТЫ</div>
+            <p class="mb-6 text-center text-2xl text-dark">Центральный офис: г. Армавир, ул. Мичурина 2</p>
+            <div class="mb-6 grid grid-cols-1 gap-4 text-xl font-bold xl:grid-cols-3 xl:gap-0">
                 <div>
                     <dl>
                         <dt>ОСП г. Краснодар:</dt>
@@ -509,7 +549,9 @@
                 </div>
             </div>
             <div class="text-center">
-                <button type="button" class="btn btn-primary">Есть вопросы? напишите нам!</button>
+                <button type="button" class="btn btn-primary" data-fancybox data-src="#form">
+                    Есть вопросы? напишите нам!
+                </button>
             </div>
         </div>
         <img src="img/map.jpg" alt="" width="2000" height="509" loading="lazy" />

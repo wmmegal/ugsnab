@@ -1,11 +1,18 @@
 <footer id="footer" class="relative mt-auto bg-[#352666]">
-    <img src="img/bg-footer.jpg" width="354" height="160" loading="lazy" class="absolute bottom-0 left-0" alt="" />
-    <div class="container flex py-10 text-lg text-white xl:py-14">
-        <div>
+    <img
+        src="img/bg-footer.jpg"
+        width="354"
+        height="160"
+        loading="lazy"
+        class="absolute bottom-0 left-0 hidden xl:block"
+        alt=""
+    />
+    <div class="container flex flex-wrap gap-4 py-10 text-lg text-white xl:py-14">
+        <div class="order-2 xl:order-1">
             2024 © ООО "ЮгСнаб" Дистрибьюторская компания <br />
             <a href="#" class="underline hover:no-underline">Создание сайтов в Армавире</a>
         </div>
-        <ul class="ml-auto flex gap-6">
+        <ul class="order-1 ml-auto flex flex-wrap gap-4 xl:order-2 xl:gap-6">
             <li><a href="#">Главная</a></li>
             <li><a href="#">О компании</a></li>
             <li><a href="#">Акции</a></li>
@@ -15,4 +22,5 @@
         </ul>
     </div>
 </footer>
+<load ="partials/modal.html" />
 <script type="module" src="./js/common.js" defer></script>

@@ -2,32 +2,48 @@
     <img
         src="img/bg-cat.jpg"
         alt=""
-        class="absolute h-full w-full object-fill"
+        class="absolute h-full w-full object-cover"
         width="2000"
         height="705"
         loading="lazy"
     />
-    <div class="flex h-[705px] flex-col justify-center">
+    <div class="flex h-[300px] flex-col justify-center xl:h-[705px]">
         <div class="container relative">
             <div class="max-w-[570px] text-white">
-                <div class="mb-8 text-4xl font-bold uppercase">ЮгСнаб обслуживает более 6000 ТТ</div>
-                <p class="text-[29px]">
+                <div class="mb-2 text-xl font-bold uppercase xl:mb-8 xl:text-4xl">ЮгСнаб обслуживает более 6000 ТТ</div>
+                <p class="xl:text-[29px]">
                     Компания «ЮгСнаб» является одним из лидеров среди компаний, занимающихся доставкой продуктов,
                 </p>
             </div>
-            <div class="absolute right-0 top-1/2 flex -translate-y-1/2">
+            <div
+                class="mt-4 flex justify-center gap-4 xl:absolute xl:right-0 xl:top-1/2 xl:mt-0 xl:-translate-y-1/2 xl:gap-0"
+            >
                 <div class="relative">
-                    <img src="img/hexagon-cta.png" alt="" width="244" height="267" loading="lazy" />
-                    <div class="inset-center text-center font-bold uppercase text-white">
-                        <div class="text-xl">Армавир</div>
-                        <div class="text-[30px]">3672 ТТ</div>
+                    <img
+                        src="img/hexagon-cta.png"
+                        alt=""
+                        class="hidden xl:block"
+                        width="244"
+                        height="267"
+                        loading="lazy"
+                    />
+                    <div class="xl:inset-center text-center font-bold uppercase text-white">
+                        <div class="xl:text-xl">Армавир</div>
+                        <div class="xl:text-[30px]">3672 ТТ</div>
                     </div>
                 </div>
-                <div class="relative -ml-[30px]">
-                    <img src="img/hexagon-cta.png" alt="" width="244" height="267" loading="lazy" />
-                    <div class="inset-center text-center font-bold uppercase text-white">
-                        <div class="text-xl">Краснодар</div>
-                        <div class="text-[30px]">2435 ТТ</div>
+                <div class="relative xl:-ml-[30px]">
+                    <img
+                        src="img/hexagon-cta.png"
+                        alt=""
+                        width="244"
+                        height="267"
+                        class="hidden xl:block"
+                        loading="lazy"
+                    />
+                    <div class="xl:inset-center text-center font-bold uppercase text-white">
+                        <div class="xl:text-xl">Краснодар</div>
+                        <div class="xl:text-[30px]">2435 ТТ</div>
                     </div>
                 </div>
             </div>

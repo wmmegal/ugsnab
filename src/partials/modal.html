@@ -1,0 +1,41 @@
+<div id="form" style="display: none">
+    <div
+        class="w-full max-w-[646px] rounded-[10px] bg-gradient-to-b from-[#41245d] to-[#684e79] px-8 py-6 xl:px-16 xl:py-12"
+    >
+        <div class="mb-10 text-center text-[26px] uppercase text-white">
+            Остались вопросы? <br />
+            Напишите нам!!
+        </div>
+        <form action="#">
+            <div class="mb-5">
+                <input type="text" placeholder="Ваше имя" class="form-input" aria-label="" />
+            </div>
+            <div class="mb-5">
+                <input type="text" placeholder="Телефон" class="form-input" aria-label="" />
+            </div>
+            <div class="mb-5">
+                <textarea placeholder="Вопрос" class="form-textarea" aria-label="Вопрос"></textarea>
+            </div>
+            <div class="mb-6 flex items-center gap-2">
+                <input
+                    type="checkbox"
+                    id="rule"
+                    class="form-checkbox size-8 rounded border-0 text-primary focus:border-0 focus:shadow-none focus:outline-0 focus:ring-0 focus:ring-offset-0"
+                    x-model="rule"
+                    name="rule"
+                />
+                <label for="rule" class="cursor-pointer text-white">Согласен (а) на обработку перональных даных </label>
+            </div>
+            <div class="text-center">
+                <button
+                    type="button"
+                    class="btn btn-secondary py-5"
+                    :disabled="!rule"
+                    :class="{'opacity-50': !rule, 'pointer-events-none': !rule}"
+                >
+                    Отправить
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

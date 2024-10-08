@@ -1,3 +1,6 @@
+import forms from '@tailwindcss/forms';
+import hamburgers from 'tailwind-hamburgers';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ['./src/**/*.{html,js}'],
@@ -26,5 +29,5 @@ module.exports = {
             },
         },
     },
-    plugins: [],
+    plugins: [forms, hamburgers],
 };

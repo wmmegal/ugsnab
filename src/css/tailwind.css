@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+[x-cloak] {
+    display: none !important;
+}
+
 @layer base {
     body {
         font-family: 'Roboto', system-ui;
@@ -11,15 +15,32 @@
 }
 
 @layer components {
+    .logo-inner {
+        @apply xl:inset-center z-10 w-24 xl:w-[120px];
+    }
+
+    .logo-wrap {
+        @apply xl:absolute xl:left-1/2 xl:top-10 xl:-translate-x-1/2;
+
+        .logo {
+            @apply relative z-10 w-24 xl:w-[180px];
+        }
+
+        .logo-cover {
+            @apply hidden xl:absolute xl:left-1/2 xl:top-[72px] xl:block xl:-translate-x-1/2;
+            min-width: 269px;
+        }
+    }
+
     .btn {
-        @apply inline-flex justify-center rounded-[18px] px-20 py-8 text-lg font-bold uppercase leading-none;
+        @apply inline-flex justify-center rounded-[18px] px-8 py-5 font-bold uppercase leading-none xl:px-20 xl:py-8 xl:text-lg;
 
         &.btn-empty-white {
             @apply text-white;
             box-shadow: 0 0 0 3px inset;
 
             &:hover {
-                @apply text-dark bg-white;
+                @apply bg-white text-dark;
             }
         }
 
@@ -31,15 +52,54 @@
                 background-image: linear-gradient(-29deg, #6d537b 0%, #4f2778 100%);
             }
         }
+
+        &.btn-secondary {
+            @apply bg-[#b584d3] text-white;
+
+            &:hover {
+                @apply bg-[#d6aff2];
+            }
+        }
+    }
+
+    .form-input,
+    .form-textarea {
+        @apply w-full rounded-[10px] border-0 px-9 py-4;
+    }
+
+    .form-textarea {
+        height: 139px;
+        resize: none;
+    }
+
+    .pagination {
+        .current {
+            background: url('img/bg-page.png') no-repeat;
+            width: 70px;
+            height: 77px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@layer utilities {
+    .inset-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
 .splide__pagination {
-    @apply absolute bottom-9 left-1/2 flex -translate-x-1/2 transform gap-3;
+    @apply absolute bottom-4 left-1/2 flex -translate-x-1/2 transform gap-3 xl:bottom-9;
 
     li {
         button {
-            @apply h-2.5 w-12 rounded-[5px] bg-white bg-opacity-50;
+            @apply h-1.5 w-8 rounded-[5px] bg-white bg-opacity-50 xl:h-2.5 xl:w-12;
 
             &.is-active {
                 @apply bg-opacity-100;
@@ -58,11 +118,13 @@
     }
 }
 
-@layer utilities {
-    .inset-center {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+.fancybox__content {
+    padding: 0 !important;
+    background: none !important;
+}
+
+.fancybox__content > .f-button.is-close-btn {
+    top: 1rem !important;
+    right: 1rem !important;
+    background: none;
 }

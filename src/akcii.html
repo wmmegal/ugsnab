@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>Index</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    </head>
+    <body
+        class="flex min-h-screen flex-col"
+        x-data="app"
+        @resize.window="showMenu = window.matchMedia('(min-width: 1200px)').matches"
+    >
+        <load ="partials/header-inner.html" />
+        <load ="partials/header-fixed.html" />
+        <div class="relative">
+            <img
+                src="img/bg-path.jpg"
+                alt=""
+                width="2000"
+                height="141"
+                loading="lazy"
+                class="absolute left-0 top-0 h-full w-full object-cover object-left"
+            />
+            <div class="container relative z-10 py-5 text-white">
+                <ul class="mb-12 flex items-center gap-3">
+                    <li class="flex items-center gap-2">
+                        <i class="size-2 rounded-full bg-[#9f89ad]"></i>
+                        <a href="#">Главная</a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="size-2 rounded-full bg-[#9f89ad]"></i>
+                        <span>О компании</span>
+                    </li>
+                </ul>
+                <div class="mb-10 text-3xl font-bold uppercase">О компании</div>
+            </div>
+        </div>
+        <div class="container py-10 xl:py-20">
+            <div class="space-y-5">
+                <div class="flex flex-wrap overflow-hidden rounded-[20px] bg-[#f6f6f8] xl:flex-nowrap">
+                    <figure class="flex-shrink-0">
+                        <img src="img/akciya.jpg" alt="" width="363" height="238" loading="lazy" />
+                    </figure>
+                    <div class="p-6">
+                        <time datetime="05.06.2024" class="text-[#696969]">05.06.2024</time>
+                        <div class="mb-4">
+                            <a href="#" class="text-primary">Представили компанию "БЕТА"</a>
+                        </div>
+                        <p>
+                            Сегодня волонтеры нашего нашего техникума приняли участие в открытии спортивной дворовой
+                            площадки!
+                        </p>
+                        <div class="mt-4 text-right">
+                            <a href="#" class="inline-flex items-center gap-2.5 font-bold text-primary">
+                                Подробнее
+                                <svg class="icon-arrow h-3.5 w-[10px]">
+                                    <use href="#icon-arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap overflow-hidden rounded-[20px] bg-[#f6f6f8] xl:flex-nowrap">
+                    <figure class="flex-shrink-0">
+                        <img src="img/akciya.jpg" alt="" width="363" height="238" loading="lazy" />
+                    </figure>
+                    <div class="p-6">
+                        <time datetime="05.06.2024" class="text-[#696969]">05.06.2024</time>
+                        <div class="mb-4">
+                            <a href="#" class="text-primary">Представили компанию "БЕТА"</a>
+                        </div>
+                        <p>
+                            Сегодня волонтеры нашего нашего техникума приняли участие в открытии спортивной дворовой
+                            площадки!
+                        </p>
+                        <div class="mt-4 text-right">
+                            <a href="#" class="inline-flex items-center gap-2.5 font-bold text-primary">
+                                Подробнее
+                                <svg class="icon-arrow h-3.5 w-[10px]">
+                                    <use href="#icon-arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap overflow-hidden rounded-[20px] bg-[#f6f6f8] xl:flex-nowrap">
+                    <figure class="flex-shrink-0">
+                        <img src="img/akciya.jpg" alt="" width="363" height="238" loading="lazy" />
+                    </figure>
+                    <div class="p-6">
+                        <time datetime="05.06.2024" class="text-[#696969]">05.06.2024</time>
+                        <div class="mb-4">
+                            <a href="#" class="text-primary">Представили компанию "БЕТА"</a>
+                        </div>
+                        <p>
+                            Сегодня волонтеры нашего нашего техникума приняли участие в открытии спортивной дворовой
+                            площадки!
+                        </p>
+                        <div class="mt-4 text-right">
+                            <a href="#" class="inline-flex items-center gap-2.5 font-bold text-primary">
+                                Подробнее
+                                <svg class="icon-arrow h-3.5 w-[10px]">
+                                    <use href="#icon-arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination mt-10 flex items-center justify-center gap-6 text-xl font-bold xl:text-[30px]">
+                <span class="current">1</span>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#" class="next">
+                    <img src="img/bg-page-arrow.png" alt="" width="50" height="74" loading="lazy" />
+                </a>
+            </div>
+        </div>
+        <div class="py-10 xl:py-20">
+            <div class="splide splide-partners mb-10">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-1.png" alt="" width="177" height="65" loading="lazy" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-2.png" alt="" width="359" loading="lazy" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-3.png" alt="" width="690" loading="lazy" height="200" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-1.png" alt="" width="177" height="65" loading="lazy" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-2.png" alt="" width="359" loading="lazy" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-3.png" alt="" width="690" loading="lazy" height="200" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-1.png" alt="" width="177" height="65" loading="lazy" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-2.png" alt="" width="359" loading="lazy" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#">
+                                <img src="img/partner-3.png" alt="" width="690" loading="lazy" height="200" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container mb-10 text-dark">
+            <div class="mb-7 text-center text-3xl font-bold uppercase text-dark">КОНТАКТЫ</div>
+            <p class="mb-6 text-center text-2xl text-dark">Центральный офис: г. Армавир, ул. Мичурина 2</p>
+            <div class="mb-6 grid grid-cols-1 gap-4 text-xl font-bold xl:grid-cols-3 xl:gap-0">
+                <div>
+                    <dl>
+                        <dt>ОСП г. Краснодар:</dt>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 320-15-18</a>
+                            <a href="#" class="text-primary">Отдел выписки</a>
+                        </dd>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 161-79-93</a>
+                            <a href="#" class="text-primary">Отдел закупок</a>
+                        </dd>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 433-81-40</a>
+                            <a href="#" class="text-primary">Отдел продаж</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div>
+                    <dl>
+                        <dt>ОСП г. Армавир:</dt>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 320-15-18</a>
+                            <a href="#" class="text-primary">Отдел выписки</a>
+                        </dd>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 161-79-93</a>
+                            <a href="#" class="text-primary">Отдел закупок</a>
+                        </dd>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 433-81-40</a>
+                            <a href="#" class="text-primary">Отдел продаж</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div>
+                    <dl>
+                        <dt>ОСП ст.Павловская</dt>
+                        <dd>
+                            <a href="tel:+79183201518">+7 (918) 630-57-77</a>
+                            <a href="#" class="text-primary">Отделы выписки, закупок, продаж</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary" data-fancybox data-src="#form">
+                    Есть вопросы? напишите нам!
+                </button>
+            </div>
+        </div>
+        <img src="img/map.jpg" alt="" width="2000" height="509" loading="lazy" />
+        <load ="partials/footer.html" />
+    </body>
+</html>
