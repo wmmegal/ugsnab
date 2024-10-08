@@ -17,6 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
     "prettier": "^3.3.3",

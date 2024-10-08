@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ru" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>Index</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+      <script type="module" crossorigin src="./assets/js/common-99aa5db3.js"></script>
+      <link rel="stylesheet" href="./assets/css/common-71228fe3.css">
+    </head>
+    <body
+        class="flex min-h-screen flex-col"
+        x-data="app"
+        @resize.window="showMenu = window.matchMedia('(min-width: 1200px)').matches"
+    >
+        <div class="relative z-10">
+    <div class="container flex flex-wrap items-center py-4 xl:py-12">
+        <img src="./assets/img/logo-2-8a5993ad.svg" width="180" height="146" class="logo-inner" alt="" />
+        <div
+            class="tham tham-e-squeeze tham-w-8 ml-auto text-primary xl:hidden"
+            @click="showMenu = !showMenu"
+            :class="{'tham-active': showMenu}"
+        >
+            <div class="tham-box">
+                <div class="tham-inner"></div>
+            </div>
+        </div>
+        <ul
+            class="mb-2 mt-4 flex basis-full flex-col gap-2 font-bold uppercase xl:mb-0 xl:mt-0 xl:basis-auto xl:flex-row xl:gap-10"
+            x-show="showMenu"
+            x-transition
+            x-cloak
+        >
+            <li><a href="#" class="text-primary">ГЛАВНАЯ</a></li>
+            <li><a href="#" class="hover:text-primary">О КОМПАНИИ</a></li>
+            <li><a href="#" class="hover:text-primary">Акции</a></li>
+        </ul>
+        <ul
+            class="flex basis-full flex-col gap-2 font-bold uppercase xl:ml-auto xl:basis-auto xl:flex-row xl:gap-10"
+            x-show="showMenu"
+            x-transition
+            x-cloak
+        >
+            <li><a href="#" class="text-primary"> ПРОДУКЦИЯ</a></li>
+            <li><a href="#" class="hover:text-primary">НАШИ ПАРТНЕРЫ</a></li>
+            <li><a href="#" class="hover:text-primary">КОНТАКТЫ</a></li>
+        </ul>
+    </div>
+</div>
+
+        <div class="fixed left-0 top-0 z-10 w-full bg-white" x-show="showFixedHeader" x-cloak>
+    <div class="container flex flex-wrap items-center py-4 xl:py-12">
+        <img src="./assets/img/logo-2-8a5993ad.svg" width="180" height="146" class="logo-inner" alt="" />
+        <div
+            class="tham tham-e-squeeze tham-w-8 ml-auto text-primary xl:hidden"
+            @click="showMenu = !showMenu"
+            :class="{'tham-active': showMenu}"
+        >
+            <div class="tham-box">
+                <div class="tham-inner"></div>
+            </div>
+        </div>
+        <ul
+            class="mb-2 mt-4 flex basis-full flex-col gap-2 font-bold uppercase xl:mb-0 xl:mt-0 xl:basis-auto xl:flex-row xl:gap-10"
+            x-show="showMenu"
+            x-transition
+            x-cloak
+        >
+            <li><a href="#" class="text-primary">ГЛАВНАЯ</a></li>
+            <li><a href="#" class="hover:text-primary">О КОМПАНИИ</a></li>
+            <li><a href="#" class="hover:text-primary">Акции</a></li>
+        </ul>
+        <ul
+            class="flex basis-full flex-col gap-2 font-bold uppercase xl:ml-auto xl:basis-auto xl:flex-row xl:gap-10"
+            x-show="showMenu"
+            x-transition
+            x-cloak
+        >
+            <li><a href="#" class="text-primary"> ПРОДУКЦИЯ</a></li>
+            <li><a href="#" class="hover:text-primary">НАШИ ПАРТНЕРЫ</a></li>
+            <li><a href="#" class="hover:text-primary">КОНТАКТЫ</a></li>
+        </ul>
+    </div>
+</div>
+
+        <div class="relative">
+            <img
+                src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCACNB9ADASIAAhEBAxEB/8QAGwABAQADAQEBAAAAAAAAAAAAAAECAwQFBwb/xAA1EAEAAgIBAAcHAgYBBQAAAAAAARECAwQSITEzQVGBBSI0YXFysTJSEyNCkaHBFUNTYoLR/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECBAP/xAAYEQEBAQEBAAAAAAAAAAAAAAAAARExQf/aAAwDAQACEQMRAD8A3oso7XsIqSAioAiygCKigioCAAiKgEpKygCKgCKgIBKokgAiKgCKgCKiiAAiKgASFWdRJVGWxFQBFQEABEVAEVAEVASQAQAVAAQJAQAERUARUARUARZQEABJABCQBAAQBQRUBAAQABcP1IuHaFbBBGVEAUQBXPnN5TLe5lWAA0gAIKgCKgCKgAACKAgAIAAiooSioAAAigIACAAAAgACKigAgAKCSqIACgAKACIAAAAAAioAAAACLEzjMTHbCAPYwy6eGOXnFsmniTfGw/s2ssKIIKIArj9ox7uE/OXW5faHc4/csI4AG2gAAAAABFQAAAAAAAAQAAAAAAAAAAABnpms/rDe5sZrKJdAiiAKIAogDVtxqelHi1umYuKlpz1zHXHXCjAAAAAAAAAAAAQAAAUAAAAAAG3Tj19KfRMNUz15dUNqWqoggogCiAK0bZvP6NzmmbmZ81iUAaQAAAAAAAAAB9GRUc4IqAIqAIqAIqSoIqAgAIioAioAioAioCAKiAAiKgCKgCKkqIEgIioAAVZ1AGW0RUARUBBUBAkkERUARUARUBAJFQAEABAARFQBFQBFQBFQEABAAQAEJAEAUEVASQkARZQBcO1JXHtCsxBGVEAUQBXM6HOqwAGkCQBFQBFQBFQAAAAEABAFBFQBFQAAAAEABAFABBAAEWUUAEABQRUQAFAAAAEkAAAAABFQAAAAEAB6fE+Gw9fy3NHE+Gw9fy3M1hRBBRAFcvP7jH7v9S6XNz+4x+7/AFKwjgAbaAAAAAAEVJAAAAAAAAEAAAAAAAAAAAAG/DK8YaGevKsq8wbhARRAFEAUQBjlrjL5S1ZYTj2t4DnGzLXE9nU1zExPXCgAAAAAAAIAAAKAAAsRMz1Q2Y64jt6wYY4Tl9G3HCMfr5qM6qiAKIAogCiAMdmVYfVpZbMry+UMWogAqAAAAAAAAAAPoyKjnBFQBFQBFQBFlAEVr27deqLzyiFGSTMYxczER83Dt9oZZdWqOjHnPa5c8885vPKcp+couPSz5mjH+u/p1tOXtDD+nXM/WacIGOyfaE+GuP7p/wAhl/24/u5AMdsc+PHXMfSWePM05dszj9YeeGmPWxyxzi8comPlI8mJnGbiZifk36+Zsx6svej/ACumO4a9e/Xt/TNT5S2CIAqIiySCIqAIqAgqKIACAFWdQBltEUkERUARUBBUBAARFQBFQEAFQAEABAkBEUBAARFQBFQEABBUBAAQAEJBQRUkEFQBFQBce1Fx7QrIQGVEAUQAaG9oFgEg0gACKgCKAiKgBIAAAgAIAoIqAIqAAAAAgAIEgAAIAAiooAIACgiogAKAqIAACKigAAAAioAAAAIgCq9LifDYev5bmnifDYev5bWGFEAUQBXNzu5x+7/Uuhzc7ucfu/0QjhAbaAAAAAAEVAAAAAABAAAAAAAAAAAAAAABRtxy6UfNk04z0ZttiYmLEUQQUQBRAFEAVJiJ7QBhlr8mDckxE9qjULOMx80AAEAAAFAGUYTPb1AxZ46/NlERHYqaqxUdgggogCiAKIAogCsc8qj5yTMRFtUzc2sABpkAAAQAFAAAAAAH0ZFRzgACIqAIqAMcsscMZyymIiPGXNv5+vXeOv38v8Q8/bu2bsrzyvyjwgMde/2h246Y/wDaXFlnOeU5ZTMzPjLEGlEAUQBRAFEAUQBbdGrl5Y9WfvR5+LmAephsx2ReM2ry8cssJvGZiXVq5kT1bIr5wus46ZCJiYuJuBURFARFRQRUBBUBACrOoEjLaEgCIoCIqAIqAgAIiykgIqAgAqAAIqAkgAgAIEgIioAioCCoAioCAAgAIAoIqAIqAIqAEdoQFZCAyogCiAK0NzSLAAaQABFQAkAQAEAAABAAQBQRUARUAAAABAAQVAAAQABFRQJBAAUAEEBVBFQAABFQAAAABFQAABFQQAUejxfhsPX8tzTxfh8fX8trDKiAKIArm53c4/c6HPzu5j7lg4QGmgAAAAABFQAAAAQAAAAAAAAAAAAAAAUAAFxyqUAbYmJGuJmGcZRIiiCCiAKIAogCiAKxnGJ+SgMJiYRsYzjHgqMRejJ0ZBFiJllGMfVTQjGIVAVRBBRAFEAUQBRAFJmIhjOUQwmZlcRcsrlAaQAAAQAFAAAAAAAAH0ZFHOIACIx27tenHpbMoxj8vN5HtHPZeOr3MfPxkI7t/L1aIrKby/bHa8zfzNu/qvo4/thzzNzcyC4ogqqIAogCiAKIAogCiAKIAogDPXtz1zeM+jr1crDZ1Ze7l83CCY9QcGrkZ6+r9WPlLr17sNv6Z6/KVSxmAqIioBKSqAgBVnUAZbQAEABEVAEVAQkARFQBFQEAFQkJARUARUBCVlAQAERUkBFQBFSQEVAQAEABAFBFQBFQBFQAgICqIDKiAKIArS2tQsABoRUARUAABAAQAAAEkAEAUEVAAAQAAAEkABFRQAQQVAEVAAAAFABAAVBFSRQABFQAAAABFQAAEAEAFHo8X4fH1/La08X4fH1/LayyoggogCubm9zH3Ohz83uY+5YOIBpoAAAAAAABAAABAAAAAAAAAAAAABQAAAAAAAEZRl5rbAugZiRl5qAAAAAAAAAAAAAAAAAAAAAAACTl5AtsZy8kFxABUAAAAAAAAAAAAAAAAfRgcvK52vje7Hv5/tjw+rnHRllGMTllMREdsy8/ke1Ii8dEXP7p7HDv5O3kZXsy6vDGOyGoXGWezPZl0s8pymfGWIKoAAAAAAAAAAM8dG3Ls15T6LPH3Y9urL+wNYTExNSAAAAAAAAALE1NxKAOjXy5jq2dcefi6sc8c4vGbh5q455YTeM1JqY9JGjVyoy6s+qfPwb1ZEVFEAKs6gDLaAAgEgkpKoAioCAAiKgCKgCLKAgAoioAioAioCAAiLICIqAIsoAioCSACAAgqKCKAiKgCKgAAUAGQAAABqbGsagAKIqAIqSAACEgCAAAAgAJICgiygAAIBIAAIAAioAABKKgCKAgAACgAgAKgioKAAIqAAAAAAAgCogCAAo9Di/D4+v5bWrjfD4+v5bWWQBAAAc/N7qPudDn5vdR9yjiAaaAAAAAAAAQAQAAAAAAAAAAAAAAAUAAAAAAABAAAiaAGUSMSwZCAKIAogCiAKIAogCiAKIAogCkyxsUJmwBABQAEAAAEABQAAAAAAAAAB+05vtKr1aJ6+yc/wD48uZubmUHg0ogCiAKIAogCiAKNmjjbeRPuY9XjlPY9LRwdWmsp9/PznwE1xaODt29eUdDHzntl6GrjatMe7jc/untbkE1CQkGvZq17YrPGJcO7gZY9eqelHlPa9EB4cxMTU9Uj1t3H17v1R1/ujtefv4mzT1/qx84F1pEBVEAUQBRAFEAVu08icPdy68fw0APTiYmLibiRxaN/wDDno5fpn/Dt7YaYsQCSrOiKjLaSACAAiKgCKgIACAAiSqAIqAIqCiKkgIqAIqAgAIACASCIqAJKoAioBKKgCKigACIqAIqAJKpIUAGQAAABrZsBqAAoioAigIACAAgAAAIKgCKigioASAIAAACCoAioAAAioAACAAAKACIAKCKgoAAioAAAAAgCACiAIACjv43w+Pr+W1q43cY+v5bWWQBAAAc/M7qPudDn5ndR9yjjAaaAAAAAAABEAAAAAAAAAAAAAAAUAAAAAAABAAAAAAAAAsBFEBVEAUQBRAFEAUQBRACwFQAAAAAVAAAAAAAAAAAAAAAAAAHvCDwaUQBRAFEAUIuZqImZl3cb2ZnnWW73Mf2+MiOPXrz25dHXjOU/J6XH9mY4+9vnpT+2Ox2a9WvTj0deMYwzE1jERjFREREeECoAioCAAgAIADl38LXt68fcy+XZLg26dmmazj6T4S9hMsYyiYyiJifCQ14g7t/Aiby1TX/AIy4cscsMujljMT5SKCAqiAKIAogCuri7v8Ap5T9HIsTU3HbAj0xhp2fxdcZePizWpOiKiNiKgIACIoCIqSAiygIACAAiKgCLKCiKgCKgCKgIACAAgAIioAioAioAioBKKigACJKoABIIkqmQVBLLVlRLLBRLLBWDJiNQARRFSQAAQAEABAAAkARUBAFBFQAAEAAAARUARUAAARUAAkEAAAVAAAAAAEAFElUAAAABABABQRUAAB3cbuMfX8trVx+4x9fy2WyyollgollgrRzO6j7m62jl91H3A5AGmgAAAAAAARAkAAAAAAAAAAAAUAAAAAAABAAAAAAAAAAAAQAAAUABQAAAAAQAAAAAAAVAAAAAAAAAAAAAAAAAAAAHuWWDwaLLACywAt1cbgbuRWVdDD90+P0d/D9nadeGOzP+ZlMX1x1R6O4TXPx+Jq40e5jeXjlPa3giILSKIikwCIoCItICCpQJIqCIjJBUYbNWG3Ho542zKVHm7+Dnh72v38fLxcj3Kad3F17uuYrL90C68my1zx6Gc43dSiNFlgBZYAWWAOjibOjs6M9mX5dryomcZiYnrh6sdeMT5qnoioy0IqAgqAgqUoiLRSCItFKIi0lAgUUCItFAiKCoilAiLRMAiLRQMRaSgEWkoECigRGVJQIi0UCItJQCLRQIi0UokhRQIjKYSgQKKBEyZUxyjqCsQopWQKKACigEWkoaiC0kwiiLRQIFFAgUUCC0UDEWigSQooEAoEFpKUEWigQWigYi0UCBRQCLSUAi0TAIFFAItFAgtJQILRQILRSogtFAgtJQAUUCBRQoFFAgUUAFFAgtFCILRSiItFAgtFA7eP3GPr+Wxq48fycfX8ttMsgUUAFFANHL7qPq300cuP5cfUHIFFNNAUUAFFABRQgFFAgtJQAUUAFFABRQAUUAFFABRSgFFABRQAUUAFFCAUUAFFABRQAUUAFFCAUUAFFKAUUAFFABRQAUUAFFABRQAUUAFFABRSoBRQAUUAFFABRQAUUAFFABRQAUUAFFABRQP/Z"
+                alt=""
+                width="2000"
+                height="141"
+                loading="lazy"
+                class="absolute left-0 top-0 h-full w-full object-cover object-left"
+            />
+            <div class="container relative z-10 py-5 text-white">
+                <ul class="mb-12 flex items-center gap-3">
+                    <li class="flex items-center gap-2">
+                        <i class="size-2 rounded-full bg-[#9f89ad]"></i>
+                        <a href="#">Главная</a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="size-2 rounded-full bg-[#9f89ad]"></i>
+                        <span>О компании</span>
+                    </li>
+                </ul>
+                <div class="mb-10 text-3xl font-bold uppercase">О компании</div>
+            </div>
+        </div>
+        <div class="container py-10 xl:py-20">
+            <ul class="list mb-10 space-y-2 italic">
+                <li>КОМПАНИЯ ЮПС ОСНОВАНА В 1996 ГОДУ</li>
+                <li>ЧЕТВЕРТЬ ВЕКА УСПЕШНО РАБОТАЕМ НА РЫНКЕ ЮГА РОССИИ.</li>
+                <li>АКБ - 3600 ЕЖЕМЕСЯЧНЫХ ПАРТНЁРОВ (ВСЕ КАНАЛЫ ПРОДАЖ)</li>
+                <li>СОБСТВЕННЫЕ СКЛАДЫ БОЛЕЕ 7000 КВ. М</li>
+                <li>ОФИСЫ И КОМАНДЫ В ГГ. АРМАВИР, МАЙКОП, ТИХОРЕЦК, ПАВЛОВСКАЯ.</li>
+            </ul>
+            <div class="relative mb-12 rounded-[36px] border-2 border-dashed border-[#664885] px-6 py-12">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAyCAYAAAAjrenXAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAABPVJREFUeJzN2l1MW2UcBnBMcBebdy4ajRGNersLjbp44QUbbBadsrkpbNMOOrrB2Cj9gn5A6Xeha2FQSumBQcWN3c3ExCzTjMuZeGFiNJFL49eFF1Njgkvm6/P29Jyec3raHXrelr7Jc/3+WpKe/3P+NDUxPtnw9cNcZD3JRW58gawjHuQZ1vcwOwv+tbZM8Np3gBPAkRvKrCBP7LRTPLPelZZ5X+6ztH+NZIKfkmyoLJzmb8SJPLpj4OQIt3vGvRwGfCs1niMa4UI2kY66o+P2zEnAf5lxLRPASR4+AXhAM1zIl8iLNQeHL87tiw2n7wJOACdq8MXtwWnuI1PIHubgCXNyb2BgJgv4g5glTeK2DEk4s6zgQn5DjMgjusEuY6zZa4oPAX4PcAI4KQ//RC9cyDfIy1WjnafDbwK+CTjxmROkCJ8nU1K4hzmc5j/k6rZ+PoeO+1psXYGbgBPAidc0xcP7S+HTriXArwK+KoFfI1xYN1zIn4gNaa6IHuz0egEngBPnKQqPEm9vBfjoErkigS8U4Fl2cCE/IvtV0f1HXLcBJxRu/dBPHKdCpfDBWRLNwxfk8LGaw4WckKHNBqcbcDLY6QF8XISPfiyHhyh8CHCrHD4H+Hx94H8hz+bRpnbbLsD/6X9nlIe/L4d7AB/vSxB//7QMftlRBh6k8Ou1gtMk8vDedltXn8FBzgN+oSz8MvGfV8IX5XAf4H4R/j0ucCDRGsD/KMCtgb63VOAnC/CeSQU8VQG+RuGLgItPQVxkQD5njH+SwtMi/D0PuQT48AcUHiyFX1CBu0X4GuBvlPvFwmUW5FtG8FcoPCOHjwE+UYBHFPArefhkAZ4c5Sh8A3CzlmcELtyFpBjAXyvC36Zwtwi3Az7yUQF+tgiPXCrA7Yt00AppAat8gFc5/smoA94mwEd4+LECvJuHuyXwoAAfTicBf6katOID9HL8aLt9eI8G+BjgE+eSIlwvWIH/umr42cN2cg7wgXfd5CKFn5DAz1B4vBHhww+Bxxoc3lGEWwC3dQfICCZEGXyAwucaBH5QAT/qBZyfEEW4qQinE2IDwl0yeH4mF+DmpFgmGgd+yE7MHU4ycEQFni8TDQg/A7jpkE0OP14Kl9a3hoPnZ/KjfJmQw+UtqLHghgK8UwIvU98aA37AogqvUN9+QH1zMEI/h0xWD2+XwuX1TQkXy4Rt4SvUt2M60L4qwGXg1dW3BMqE5vd/HD9Y3daBLsJR34im+lYCl7Wg4EPAekdZOdx4wBLBTE4Y1bc7aEFmBZhVeZDmhSZjq6VHBtdX34TemUPv3M+xrWti8t+IsXXoccDva69vs2r1TQbPiK8oavJ+ZV38cwKe01HfJPBcPeCvF+Ft1scA/6lcC/Ko1zcJfJnMeVfqAS/9AQD8KcDvaK1vUvhM7eFbiJWr9NIfM3k3ysTPMrhKfaPwuAp8m0ssLaFl+nlNDwnAd6O+hQDfKlffeHhGhIubCXZwupkzaAIrD+pbC1rQTbX6FpPClbsgfXD6RtbOsdiFAt6KFrQprW8V4dWtVOj6hP32GfBmtCAL4PcqL7GqgutbWGk5aEF7AecAf8Bg+/Y7x2pFqPXELPP7AL9b5fatdktZrQfw09OupV/57VtOy/atPmtwLQeD1h7Ao6nx1X8rLLF25h8PtJzU2OrTgEcB3wB8A/ANYG8hXazv+h/QfjlzzCRCOgAAAABJRU5ErkJggg=="
+                    alt=""
+                    width="46"
+                    height="50"
+                    class="absolute -top-6 left-6"
+                    loading="lazy"
+                />
+
+                <p class="text-justify uppercase">
+                    <b>Объёмообразующие контракты: «ТРЕЙД СЕРВИС» </b>( ТМ «ВЯЗАНКА», «СТАРОДВОРСКИЕ КОЛБАСЫ»,
+                    «БУЛЬМЕНИ», «БАВАРУШКА»), ТК «РЕСУРС-ВОЛГА» ( ТМ «ДЫМ-ДЫМЫЧ», «РОССИЯНКА», «БЛАГОЯР» и др.), ТД
+                    «ЧЕРКИЗОВО» (ТМ «ЧЕРКИЗОВО», «МЯСНАЯ ГУБЕРНИЯ»), «МИЛК-МАРКЕТ» ( «СОЛНЫШКО КУБАНИ», «PROLATE» и
+                    др.), «МАЙ-БРЕНДС» («МАЙСКИЙ ЧАЙ», «KOFFESSO», «СURTIS», «РИЧАРД» и др.), «ЗНАТОК» (ТМ «ЗНАТОК»), ТД
+                    «НМЖК» (ТМ «АСТОРИЯ», «РЯБА», «ХОЗЯЮШКА»), «ГАРАНТ» (ТМ «ГЛАВПРОДУКТ» ), МЭЗ «ЮГ РУСИ» (ТМ
+                    «КРАСНОДАРСКИЙ МАЙОНЕЗ», «АВЕДОВ») ТД «КИПРИНО» (ТМ «КИПРИНО», «РОМАНОВСКИЙ СЫРОДЕЛ»), «ЭЙЧ ЭНД ЭН
+                    ТРЕЙД» (ТМ «РАСТИШКА», «ПРОСТОКВАШИНО», «АКТИБИО», «ДАНИССИМО», «КИНДЕР», «ПЕТМОЛ»), «АРМХЛЕБ» ( ТМ
+                    «АРМХЛЕБ», «ДОН ДЕСЕРТ»), «МАРТИН» (ТМ «МАРТИН», «ГРАНД СЕМАЧОС», «МОЛОДЕЖНЫЕ», «СУПЕР СЕМЕЧКА»,
+                    «ARGIL», «ANTARI», «ЖЕЛАЕВ» ), «ДА» (ТМ «ДЮБУА»), «ГРАНД-СТАР» (ТМ КУБАНОЧКА), «КОНТИ-РУС» (ТМ
+                    «ШОКОЛАДНЫЕ ИСТОРИИ ДЖЕК» , «bongour», «AMOUR», «СУПЕР-КОНТИК», «ЗОЛОТАЯ ЛИЛИЯ», «ESFERO», «TIMI» и
+                    др. ).
+                </p>
+                <img
+                    src="data:image/png;base64,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"
+                    loading="lazy"
+                    class="absolute -bottom-9 right-6"
+                    alt=""
+                    width="97"
+                    height="76"
+                />
+            </div>
+            <p>
+                ГЕОГРАФИЯ ДИСТРИБЬЮЦИИ: ГГ. АРМАВИР, НОВОАЛЕКСАНДРОВСК, НОВОКУБАНСКИЙ, УСПЕНСКИЙ, ОТРАДНЕНСКИЙ,
+                ЛАБИНСКИЙ, МОСТОВСКОЙ, КУРГАНИНСКИЙ, ГУЛЬКЕВИЧСКИЙ, ТБИЛИССКИЙ, КАВКАЗСКИЙ, НОВОПОКРОВСКИЙ,
+                БЕЛОГЛИНСКИЙ, ТИХОРЕЦКИЙ, ВЫСЕЛКОВСКИЙ, ПАВЛОВСКИЙ, КРЫЛОВСКОЙ, КУЩЕВСКИЙ, ЛЕНИНГРАДСКИЙ, СТАРОМИНСКИЙ,
+                ПРИМОРСКО-АХТАРСКИЙ, ЕЙСКИЙ, КАНЕВСКОЙ, БЕЛОРЕЧЕНСКИЙ, АПШЕРОНСКИЙ РАЙОНЫ, МАЙКОП И РЕСПУБЛИКА АДЫГЕЯ.
+            </p>
+        </div>
+        <div class="py-10 xl:py-20">
+    <div class="splide splide-partners mb-10">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <a href="#">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALEAAABBCAMAAACpZbXuAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAF1QTFRFAAAA61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61BkAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1Lcqe1uAAAAB90Uk5TABCAUHCv/+9gML/PjyBAIJ//31C/7xBAz49gr4BwMPFptxoAAASsSURBVHic7Zp9V9MwFMYb2u6NcYaIG07g+38uBUVFkSPCtrLV9GXJc5ObtDuWnJ0jzx+wZWnzW3Lz5CadiPZDQog1Vx6LdW7UDIHTQqmIxCYWT1g2zMRBHuUZrbkvxKPn6n8SLaoXA1GTJo+05r4R23ol7kqvxC+vV+KX13jl+qT3QN/vC3F0lJtLRaF0OfxtFO0NsdRRlmz0mizig+fUxI32i7jSMC3+Zk+uz/ePuEn/DfHkvluMHdoV0bFMTX/seF26TsQ3b40BeZszlc+Wcfx1t3ZnYtm/EdEb+TLOduizaVwkhD1fazPDXfs3dp2i3Tzfod2JKALiriKW6eja22egeVYuT17iD8Y6FQ0/W3XKdpP+Vctmp71l2a4ijpLBpzYXyoGpXviIJwdmSXxrVarbbRmS80Vt1JpYXps2htVkrDrPR3z+xyo6+miWqHbjkfWZqctHtQlEYpmOPHjDatoDEh/xOzutyX+ZJdBu3vOG5HQFjkaJo+hw5b5WDUwpD/GcW69S88bYrjckz5fYASZxlKT2HCk1W9PduYf4bMkUHppTjLbrDMlZRnf/FrEMK84lycCUchODtSW6d8RPo5rVLuew0vmNEoaYc0k6MKXcxMf6y40z3d0HhifY7VohWTk/FUssXZJc+zbP7TpOYrS2NNEhbRoc1y4NyYsFszHhiYlLgrOgnMRgbaPraa4b3dCRe2/3n1wcc3Vb5fxEh1cOYuWS3MD4icHaZCBAiJgGZ8doodphwfkRKisyIQdx5ZLswHiJwdqKyYbT0EqeTB+oqsmQJM6v71f6iYc4SpIlc8cGYrC20tBO9C3GtukyU1oyjbjSrWf7iL1yEGPWVgbuhd4KWwYXcbbpkErVuiaGuB1dl0iwQzYNrpRjZlNB7tExMVpbnWFC5slkcIVY90SR/I4Qx73MeTQjNVht9BueGKwt+V7zwEUbPtPa5r68jByaEt/yk7T6MLvHIOWJYZ4NvthldgZXq9pfsDITO4PY5ZKVszQSY9am+hP73b07NDOtLZKV5VjErEvWA9NIfKpb1Vs7jG3G4JTmdkiKgZ1JMsT2gr4dmCbiSzh0gp0dzD3O4JTMkDTSGx8xXZu1szQRg7Xh+GOssAanRNZmx46IJwaXRGdpIEbrJXMMUo3KpJ1qnttO4tol6cA03A83pGQnimmaw+C6IC4W/Yzm9g33AxujRyo495TpsfpH4h3vh+FqeAKkR/7jr7DEYG3mzhm/DHM81LaFUt0Ro7WZaxtuRbwGF5QYrC0S5jGWAIP3nc2EJJ4yz114+QwuJDFz1uaSx+BCEp805Lggj8EFJMYsuEm+DC4c8WmLrY+S2+DCEdtn3D65DS4c8fFuz6ycBheMGFeINnIaXDBiOJSQ+xz+4mecmy6DC0aM1uacVvgAyjr/bmpBqxNitLbtpt9Wm1qhiNHaPMtDi5EIREyszX4MpoRbEe4pqrsFVBfEaG0OklLkm/E8YYiJtXnzdYwe/ngoDDGW+vdE5EHfXfsWiAR+cZfnbAXDmqyUo056uo/9+06ce3zvwL2gBSIZgrPt637j82H9swn8xQT8mKLhyfZUR7yjpr7XwrHI/AXHPBJgfHrFEAAAAABJRU5ErkJggg==" alt="" width="177" height="65" loading="lazy" />
+                    </a>
+                </li>
+                <li class="splide__slide">
+                    <a href="#">
+                        <img src="./assets/img/partner-2-1761a90e.png" alt="" width="359" loading="lazy" />
+                    </a>
+                </li>
+                <li class="splide__slide">
+                    <a href="#">
+                        <img src="./assets/img/partner-3-cfe55496.png" alt="" width="690" loading="lazy" height="200" />
+                    </a>
+                </li>
+                <li class="splide__slide">
+                    <a href="#">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALEAAABBCAMAAACpZbXuAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAF1QTFRFAAAA61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61BkAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1Lcqe1uAAAAB90Uk5TABCAUHCv/+9gML/PjyBAIJ//31C/7xBAz49gr4BwMPFptxoAAASsSURBVHic7Zp9V9MwFMYb2u6NcYaIG07g+38uBUVFkSPCtrLV9GXJc5ObtDuWnJ0jzx+wZWnzW3Lz5CadiPZDQog1Vx6LdW7UDIHTQqmIxCYWT1g2zMRBHuUZrbkvxKPn6n8SLaoXA1GTJo+05r4R23ol7kqvxC+vV+KX13jl+qT3QN/vC3F0lJtLRaF0OfxtFO0NsdRRlmz0mizig+fUxI32i7jSMC3+Zk+uz/ePuEn/DfHkvluMHdoV0bFMTX/seF26TsQ3b40BeZszlc+Wcfx1t3ZnYtm/EdEb+TLOduizaVwkhD1fazPDXfs3dp2i3Tzfod2JKALiriKW6eja22egeVYuT17iD8Y6FQ0/W3XKdpP+Vctmp71l2a4ijpLBpzYXyoGpXviIJwdmSXxrVarbbRmS80Vt1JpYXps2htVkrDrPR3z+xyo6+miWqHbjkfWZqctHtQlEYpmOPHjDatoDEh/xOzutyX+ZJdBu3vOG5HQFjkaJo+hw5b5WDUwpD/GcW69S88bYrjckz5fYASZxlKT2HCk1W9PduYf4bMkUHppTjLbrDMlZRnf/FrEMK84lycCUchODtSW6d8RPo5rVLuew0vmNEoaYc0k6MKXcxMf6y40z3d0HhifY7VohWTk/FUssXZJc+zbP7TpOYrS2NNEhbRoc1y4NyYsFszHhiYlLgrOgnMRgbaPraa4b3dCRe2/3n1wcc3Vb5fxEh1cOYuWS3MD4icHaZCBAiJgGZ8doodphwfkRKisyIQdx5ZLswHiJwdqKyYbT0EqeTB+oqsmQJM6v71f6iYc4SpIlc8cGYrC20tBO9C3GtukyU1oyjbjSrWf7iL1yEGPWVgbuhd4KWwYXcbbpkErVuiaGuB1dl0iwQzYNrpRjZlNB7tExMVpbnWFC5slkcIVY90SR/I4Qx73MeTQjNVht9BueGKwt+V7zwEUbPtPa5r68jByaEt/yk7T6MLvHIOWJYZ4NvthldgZXq9pfsDITO4PY5ZKVszQSY9am+hP73b07NDOtLZKV5VjErEvWA9NIfKpb1Vs7jG3G4JTmdkiKgZ1JMsT2gr4dmCbiSzh0gp0dzD3O4JTMkDTSGx8xXZu1szQRg7Xh+GOssAanRNZmx46IJwaXRGdpIEbrJXMMUo3KpJ1qnttO4tol6cA03A83pGQnimmaw+C6IC4W/Yzm9g33AxujRyo495TpsfpH4h3vh+FqeAKkR/7jr7DEYG3mzhm/DHM81LaFUt0Ro7WZaxtuRbwGF5QYrC0S5jGWAIP3nc2EJJ4yz114+QwuJDFz1uaSx+BCEp805Lggj8EFJMYsuEm+DC4c8WmLrY+S2+DCEdtn3D65DS4c8fFuz6ycBheMGFeINnIaXDBiOJSQ+xz+4mecmy6DC0aM1uacVvgAyjr/bmpBqxNitLbtpt9Wm1qhiNHaPMtDi5EIREyszX4MpoRbEe4pqrsFVBfEaG0OklLkm/E8YYiJtXnzdYwe/ngoDDGW+vdE5EHfXfsWiAR+cZfnbAXDmqyUo056uo/9+06ce3zvwL2gBSIZgrPt637j82H9swn8xQT8mKLhyfZUR7yjpr7XwrHI/AXHPBJgfHrFEAAAAABJRU5ErkJggg==" alt="" width="177" height="65" loading="lazy" />
+                    </a>
+                </li>
+                <li class="splide__slide">
+                    <a href="#">
+                        <img src="./assets/img/partner-2-1761a90e.png" alt="" width="359" loading="lazy" />
+                    </a>
+                </li>
+                <li class="splide__slide">
+                    <a href="#">
+                        <img src="./assets/img/partner-3-cfe55496.png" alt="" width="690" loading="lazy" height="200" />
+                    </a>
+                </li>
+                <li class="splide__slide">
+                    <a href="#">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALEAAABBCAMAAACpZbXuAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAF1QTFRFAAAA61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61Bk61BkAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1LAH1Lcqe1uAAAAB90Uk5TABCAUHCv/+9gML/PjyBAIJ//31C/7xBAz49gr4BwMPFptxoAAASsSURBVHic7Zp9V9MwFMYb2u6NcYaIG07g+38uBUVFkSPCtrLV9GXJc5ObtDuWnJ0jzx+wZWnzW3Lz5CadiPZDQog1Vx6LdW7UDIHTQqmIxCYWT1g2zMRBHuUZrbkvxKPn6n8SLaoXA1GTJo+05r4R23ol7kqvxC+vV+KX13jl+qT3QN/vC3F0lJtLRaF0OfxtFO0NsdRRlmz0mizig+fUxI32i7jSMC3+Zk+uz/ePuEn/DfHkvluMHdoV0bFMTX/seF26TsQ3b40BeZszlc+Wcfx1t3ZnYtm/EdEb+TLOduizaVwkhD1fazPDXfs3dp2i3Tzfod2JKALiriKW6eja22egeVYuT17iD8Y6FQ0/W3XKdpP+Vctmp71l2a4ijpLBpzYXyoGpXviIJwdmSXxrVarbbRmS80Vt1JpYXps2htVkrDrPR3z+xyo6+miWqHbjkfWZqctHtQlEYpmOPHjDatoDEh/xOzutyX+ZJdBu3vOG5HQFjkaJo+hw5b5WDUwpD/GcW69S88bYrjckz5fYASZxlKT2HCk1W9PduYf4bMkUHppTjLbrDMlZRnf/FrEMK84lycCUchODtSW6d8RPo5rVLuew0vmNEoaYc0k6MKXcxMf6y40z3d0HhifY7VohWTk/FUssXZJc+zbP7TpOYrS2NNEhbRoc1y4NyYsFszHhiYlLgrOgnMRgbaPraa4b3dCRe2/3n1wcc3Vb5fxEh1cOYuWS3MD4icHaZCBAiJgGZ8doodphwfkRKisyIQdx5ZLswHiJwdqKyYbT0EqeTB+oqsmQJM6v71f6iYc4SpIlc8cGYrC20tBO9C3GtukyU1oyjbjSrWf7iL1yEGPWVgbuhd4KWwYXcbbpkErVuiaGuB1dl0iwQzYNrpRjZlNB7tExMVpbnWFC5slkcIVY90SR/I4Qx73MeTQjNVht9BueGKwt+V7zwEUbPtPa5r68jByaEt/yk7T6MLvHIOWJYZ4NvthldgZXq9pfsDITO4PY5ZKVszQSY9am+hP73b07NDOtLZKV5VjErEvWA9NIfKpb1Vs7jG3G4JTmdkiKgZ1JMsT2gr4dmCbiSzh0gp0dzD3O4JTMkDTSGx8xXZu1szQRg7Xh+GOssAanRNZmx46IJwaXRGdpIEbrJXMMUo3KpJ1qnttO4tol6cA03A83pGQnimmaw+C6IC4W/Yzm9g33AxujRyo495TpsfpH4h3vh+FqeAKkR/7jr7DEYG3mzhm/DHM81LaFUt0Ro7WZaxtuRbwGF5QYrC0S5jGWAIP3nc2EJJ4yz114+QwuJDFz1uaSx+BCEp805Lggj8EFJMYsuEm+DC4c8WmLrY+S2+DCEdtn3D65DS4c8fFuz6ycBheMGFeINnIaXDBiOJSQ+xz+4mecmy6DC0aM1uacVvgAyjr/bmpBqxNitLbtpt9Wm1qhiNHaPMtDi5EIREyszX4MpoRbEe4pqrsFVBfEaG0OklLkm/E8YYiJtXnzdYwe/ngoDDGW+vdE5EHfXfsWiAR+cZfnbAXDmqyUo056uo/9+06ce3zvwL2gBSIZgrPt637j82H9swn8xQT8mKLhyfZUR7yjpr7XwrHI/AXHPBJgfHrFEAAAAABJRU5ErkJggg==" alt="" width="177" height="65" loading="lazy" />
+                    </a>
+                </li>
+                <li class="splide__slide">
+                    <a href="#">
+                        <img src="./assets/img/partner-2-1761a90e.png" alt="" width="359" loading="lazy" />
+                    </a>
+                </li>
+                <li class="splide__slide">
+                    <a href="#">
+                        <img src="./assets/img/partner-3-cfe55496.png" alt="" width="690" loading="lazy" height="200" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container mb-10 text-dark">
+    <div class="mb-7 text-center text-3xl font-bold uppercase text-dark">КОНТАКТЫ</div>
+    <p class="mb-6 text-center text-2xl text-dark">Центральный офис: г. Армавир, ул. Мичурина 2</p>
+    <div class="mb-6 grid grid-cols-1 gap-4 text-xl font-bold xl:grid-cols-3 xl:gap-0">
+        <div>
+            <dl>
+                <dt>ОСП г. Краснодар:</dt>
+                <dd>
+                    <a href="tel:+79183201518">+7 (918) 320-15-18</a>
+                    <a href="#" class="text-[#927bae]">Отдел выписки</a>
+                </dd>
+                <dd>
+                    <a href="tel:+79183201518">+7 (918) 161-79-93</a>
+                    <a href="#" class="text-[#927bae]">Отдел закупок</a>
+                </dd>
+                <dd>
+                    <a href="tel:+79183201518">+7 (918) 433-81-40</a>
+                    <a href="#" class="text-[#927bae]">Отдел продаж</a>
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <dl>
+                <dt>ОСП г. Армавир:</dt>
+                <dd>
+                    <a href="tel:+79183201518">+7 (918) 320-15-18</a>
+                    <a href="#" class="text-[#927bae]">Отдел выписки</a>
+                </dd>
+                <dd>
+                    <a href="tel:+79183201518">+7 (918) 161-79-93</a>
+                    <a href="#" class="text-[#927bae]">Отдел закупок</a>
+                </dd>
+                <dd>
+                    <a href="tel:+79183201518">+7 (918) 433-81-40</a>
+                    <a href="#" class="text-[#927bae]">Отдел продаж</a>
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <dl>
+                <dt>ОСП ст.Павловская</dt>
+                <dd>
+                    <a href="tel:+79183201518">+7 (918) 630-57-77</a>
+                    <a href="#" class="text-[#927bae]">Отделы выписки, закупок, продаж</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="text-center">
+        <button type="button" class="btn btn-primary" data-fancybox data-src="#form">
+            Есть вопросы? напишите нам!
+        </button>
+    </div>
+</div>
+<img src="./assets/img/map-794948d9.jpg" alt="" width="2000" height="509" loading="lazy" />
+
+        <footer id="footer" class="relative mt-auto bg-[#352666]">
+    <img
+        src="data:image/jpeg;base64,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"
+        width="354"
+        height="160"
+        loading="lazy"
+        class="absolute bottom-0 left-0 hidden xl:block"
+        alt=""
+    />
+    <div class="container relative z-10 flex flex-wrap gap-4 py-10 text-lg text-white xl:py-14">
+        <div class="order-2 xl:order-1">
+            2024 © ООО "ЮгСнаб" Дистрибьюторская компания <br />
+            <a href="#" class="underline hover:no-underline">Создание сайтов в Армавире</a>
+        </div>
+        <ul class="order-1 ml-auto flex flex-wrap gap-4 xl:order-2 xl:gap-6">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Продукция</a></li>
+            <li><a href="#">Наши партнеры</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+</footer>
+<div id="form" style="display: none">
+    <div
+        class="w-full max-w-[646px] rounded-[10px] bg-gradient-to-b from-[#41245d] to-[#684e79] px-8 py-6 xl:px-16 xl:py-12"
+    >
+        <div class="mb-10 text-center text-[26px] uppercase text-white">
+            Остались вопросы? <br />
+            Напишите нам!!
+        </div>
+        <form action="#">
+            <div class="mb-5">
+                <input type="text" placeholder="Ваше имя" class="form-input" aria-label="" />
+            </div>
+            <div class="mb-5">
+                <input type="text" placeholder="Телефон" class="form-input" aria-label="" />
+            </div>
+            <div class="mb-5">
+                <textarea placeholder="Вопрос" class="form-textarea" aria-label="Вопрос"></textarea>
+            </div>
+            <div class="mb-6 flex items-center gap-2">
+                <input
+                    type="checkbox"
+                    id="rule"
+                    class="form-checkbox size-8 rounded border-0 text-primary focus:border-0 focus:shadow-none focus:outline-0 focus:ring-0 focus:ring-offset-0"
+                    x-model="rule"
+                    name="rule"
+                />
+                <label for="rule" class="cursor-pointer text-white">Согласен (а) на обработку перональных даных </label>
+            </div>
+            <div class="text-center">
+                <button
+                    type="button"
+                    class="btn btn-secondary py-5"
+                    :disabled="!rule"
+                    :class="{'opacity-50': !rule, 'pointer-events-none': !rule}"
+                >
+                    Отправить
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+    </body>
+</html>

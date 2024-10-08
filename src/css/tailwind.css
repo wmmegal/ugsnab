@@ -64,7 +64,7 @@
 
     .form-input,
     .form-textarea {
-        @apply w-full rounded-[10px] border-0 px-9 py-4;
+        @apply w-full rounded-[10px] border-0 px-9 py-2;
     }
 
     .form-textarea {
@@ -74,13 +74,29 @@
 
     .pagination {
         .current {
-            background: url('img/bg-page.png') no-repeat;
+            background: url('$img/bg-page.png') no-repeat;
             width: 70px;
             height: 77px;
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+    }
+
+    .list {
+        li {
+            @apply relative pl-6;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 2px;
+                background: url('$img/bg-li.png') no-repeat;
+                width: 16px;
+                height: 16px;
+            }
         }
     }
 }
@@ -127,4 +143,62 @@
     top: 1rem !important;
     right: 1rem !important;
     background: none;
+}
+
+.prose {
+    h1,
+    h2,
+    h3 {
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    a.btn {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            @apply relative pl-6;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 5px;
+                background: url('$img/bg-li.png') no-repeat;
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+
+    ol {
+        list-style: none;
+        padding: 0;
+        counter-set: list;
+
+        li {
+            @apply relative pl-12;
+
+            &:before {
+                counter-increment: list;
+                content: counter(list);
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: url('$img/bg-li-2.png') no-repeat;
+                width: 34px;
+                height: 32px;
+                color: #fff;
+                text-align: center;
+                font-size: 0.875rem;
+                line-height: 32px;
+            }
+        }
+    }
 }

@@ -1,5 +1,6 @@
 import forms from '@tailwindcss/forms';
 import hamburgers from 'tailwind-hamburgers';
+import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -29,5 +30,5 @@ module.exports = {
             },
         },
     },
-    plugins: [forms, hamburgers],
+    plugins: [forms, hamburgers, typography],
 };

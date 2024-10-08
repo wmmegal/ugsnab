@@ -1,14 +1,19 @@
-import {createSvgIconsPlugin} from 'vite-plugin-svg-icons'
-import {defineConfig} from 'vite'
-import {resolve} from 'path';
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+import { defineConfig } from 'vite';
+import { resolve } from 'path';
 import glob from 'glob';
 import path from 'node:path';
-import {fileURLToPath} from 'node:url';
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
-import injectHTML from 'vite-plugin-html-inject'
+import { fileURLToPath } from 'node:url';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import injectHTML from 'vite-plugin-html-inject';
 
 export default defineConfig({
     root: resolve(__dirname, 'src'),
+    resolve: {
+        alias: {
+            $img: resolve('./src/img'),
+        },
+    },
     base: '',
     build: {
         outDir: '../public',
@@ -18,13 +23,10 @@ export default defineConfig({
                     const url = new URL(file, import.meta.url);
 
                     return [
-                        path.relative(
-                            'src',
-                            file.slice(0, file.length - path.extname(file).length)
-                        ),
-                        fileURLToPath(url)
-                    ]
-                })
+                        path.relative('src', file.slice(0, file.length - path.extname(file).length)),
+                        fileURLToPath(url),
+                    ];
+                }),
             ),
             output: {
                 assetFileNames: (assetInfo) => {
@@ -50,12 +52,12 @@ export default defineConfig({
             // Specify symbolId format
             symbolId: 'icon-[name]',
         }),
-        ViteImageOptimizer()
+        ViteImageOptimizer(),
     ],
     server: {
         port: 8080,
         watch: {
             usePolling: true,
-        }
-    }
-})
+        },
+    },
+});

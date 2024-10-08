@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>Index</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    </head>
+    <body
+        class="flex min-h-screen flex-col"
+        x-data="app"
+        @resize.window="showMenu = window.matchMedia('(min-width: 1200px)').matches"
+    >
+        <load ="partials/header-inner.html" />
+        <load ="partials/header-fixed.html" />
+        <div class="relative">
+            <img
+                src="img/bg-path.jpg"
+                alt=""
+                width="2000"
+                height="141"
+                loading="lazy"
+                class="absolute left-0 top-0 h-full w-full object-cover object-left"
+            />
+            <div class="container relative z-10 py-5 text-white">
+                <ul class="mb-12 flex items-center gap-3">
+                    <li class="flex items-center gap-2">
+                        <i class="size-2 rounded-full bg-[#9f89ad]"></i>
+                        <a href="#">Главная</a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="size-2 rounded-full bg-[#9f89ad]"></i>
+                        <span>О компании</span>
+                    </li>
+                </ul>
+                <div class="mb-10 text-3xl font-bold uppercase">О компании</div>
+            </div>
+        </div>
+        <div class="container py-10 xl:py-20">
+            <ul class="list mb-10 space-y-2 italic">
+                <li>КОМПАНИЯ ЮПС ОСНОВАНА В 1996 ГОДУ</li>
+                <li>ЧЕТВЕРТЬ ВЕКА УСПЕШНО РАБОТАЕМ НА РЫНКЕ ЮГА РОССИИ.</li>
+                <li>АКБ - 3600 ЕЖЕМЕСЯЧНЫХ ПАРТНЁРОВ (ВСЕ КАНАЛЫ ПРОДАЖ)</li>
+                <li>СОБСТВЕННЫЕ СКЛАДЫ БОЛЕЕ 7000 КВ. М</li>
+                <li>ОФИСЫ И КОМАНДЫ В ГГ. АРМАВИР, МАЙКОП, ТИХОРЕЦК, ПАВЛОВСКАЯ.</li>
+            </ul>
+            <div class="relative mb-12 rounded-[36px] border-2 border-dashed border-[#664885] px-6 py-12">
+                <img
+                    src="img/hexagon-small.png"
+                    alt=""
+                    width="46"
+                    height="50"
+                    class="absolute -top-6 left-6"
+                    loading="lazy"
+                />
+
+                <p class="text-justify uppercase">
+                    <b>Объёмообразующие контракты: «ТРЕЙД СЕРВИС» </b>( ТМ «ВЯЗАНКА», «СТАРОДВОРСКИЕ КОЛБАСЫ»,
+                    «БУЛЬМЕНИ», «БАВАРУШКА»), ТК «РЕСУРС-ВОЛГА» ( ТМ «ДЫМ-ДЫМЫЧ», «РОССИЯНКА», «БЛАГОЯР» и др.), ТД
+                    «ЧЕРКИЗОВО» (ТМ «ЧЕРКИЗОВО», «МЯСНАЯ ГУБЕРНИЯ»), «МИЛК-МАРКЕТ» ( «СОЛНЫШКО КУБАНИ», «PROLATE» и
+                    др.), «МАЙ-БРЕНДС» («МАЙСКИЙ ЧАЙ», «KOFFESSO», «СURTIS», «РИЧАРД» и др.), «ЗНАТОК» (ТМ «ЗНАТОК»), ТД
+                    «НМЖК» (ТМ «АСТОРИЯ», «РЯБА», «ХОЗЯЮШКА»), «ГАРАНТ» (ТМ «ГЛАВПРОДУКТ» ), МЭЗ «ЮГ РУСИ» (ТМ
+                    «КРАСНОДАРСКИЙ МАЙОНЕЗ», «АВЕДОВ») ТД «КИПРИНО» (ТМ «КИПРИНО», «РОМАНОВСКИЙ СЫРОДЕЛ»), «ЭЙЧ ЭНД ЭН
+                    ТРЕЙД» (ТМ «РАСТИШКА», «ПРОСТОКВАШИНО», «АКТИБИО», «ДАНИССИМО», «КИНДЕР», «ПЕТМОЛ»), «АРМХЛЕБ» ( ТМ
+                    «АРМХЛЕБ», «ДОН ДЕСЕРТ»), «МАРТИН» (ТМ «МАРТИН», «ГРАНД СЕМАЧОС», «МОЛОДЕЖНЫЕ», «СУПЕР СЕМЕЧКА»,
+                    «ARGIL», «ANTARI», «ЖЕЛАЕВ» ), «ДА» (ТМ «ДЮБУА»), «ГРАНД-СТАР» (ТМ КУБАНОЧКА), «КОНТИ-РУС» (ТМ
+                    «ШОКОЛАДНЫЕ ИСТОРИИ ДЖЕК» , «bongour», «AMOUR», «СУПЕР-КОНТИК», «ЗОЛОТАЯ ЛИЛИЯ», «ESFERO», «TIMI» и
+                    др. ).
+                </p>
+                <img
+                    src="img/hexagons.png"
+                    loading="lazy"
+                    class="absolute -bottom-9 right-6"
+                    alt=""
+                    width="97"
+                    height="76"
+                />
+            </div>
+            <p>
+                ГЕОГРАФИЯ ДИСТРИБЬЮЦИИ: ГГ. АРМАВИР, НОВОАЛЕКСАНДРОВСК, НОВОКУБАНСКИЙ, УСПЕНСКИЙ, ОТРАДНЕНСКИЙ,
+                ЛАБИНСКИЙ, МОСТОВСКОЙ, КУРГАНИНСКИЙ, ГУЛЬКЕВИЧСКИЙ, ТБИЛИССКИЙ, КАВКАЗСКИЙ, НОВОПОКРОВСКИЙ,
+                БЕЛОГЛИНСКИЙ, ТИХОРЕЦКИЙ, ВЫСЕЛКОВСКИЙ, ПАВЛОВСКИЙ, КРЫЛОВСКОЙ, КУЩЕВСКИЙ, ЛЕНИНГРАДСКИЙ, СТАРОМИНСКИЙ,
+                ПРИМОРСКО-АХТАРСКИЙ, ЕЙСКИЙ, КАНЕВСКОЙ, БЕЛОРЕЧЕНСКИЙ, АПШЕРОНСКИЙ РАЙОНЫ, МАЙКОП И РЕСПУБЛИКА АДЫГЕЯ.
+            </p>
+        </div>
+        <load ="partials/contacts.html" />
+        <load ="partials/footer.html" />
+    </body>
+</html>
