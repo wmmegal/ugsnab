@@ -27,6 +27,7 @@ const splideCta = document.querySelector('.splide-cta');
 
 if (splideCta) {
     new Splide('.splide-cta', {
+        type: 'loop',
         height: 705,
         arrows: false,
         pagination: true,
